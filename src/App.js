@@ -12,6 +12,15 @@ import ForgotPassword from "./components/User/ForgotPassword";
 import SignUp from "./components/User/SignUp";
 import Resumption from "./components/Resumption";
 import Calender from "./components/Calender";
+import Messages from "./components/Messages";
+import CustomerOrder from "./components/CustomerOrder";
+import Reservation from "./components/Reservation";
+import InvoiceReceived from "./components/InvoiceReceived";
+import InvoiceSend from "./components/InvoiceSend";
+import CreditNoteReceive from "./components/CreditNoteReceive";
+import CreditNoteSent from "./components/CreditNoteSent";
+import Customers from "./components/Customers";
+import Provider from "./components/Provider";
 
 function App() {
   return (
@@ -28,6 +37,15 @@ function App() {
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/trade" component={Resumption} />
         <Route exact path="/calender" component={Calender} />
+        <Route exact path="/message" component={Messages} />
+        <Route exact path="/order" component={CustomerOrder} />
+        <Route exact path="/reservation" component={Reservation} />
+        <Route exact path="/invoicereceive" component={InvoiceReceived} />
+        <Route exact path="/invoicesend" component={InvoiceSend} />
+        <Route exact path="/creditreceive" component={CreditNoteReceive} />
+        <Route exact path="/creditsent" component={CreditNoteSent} />
+        <Route exact path="/customer" component={Customers} />
+        <Route exact path="/provider" component={Provider} />
       </Switch>
     </Router>
   );

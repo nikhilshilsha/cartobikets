@@ -28,17 +28,51 @@ function Auction() {
     <>
       <Sidebar>
         <Row className="calender-div">
-          <Col sm={4} className="mt-3">
+          <Col sm={3} className="mt-3 borderr">
             <div className="craete-calender">
               <Button variant="primary" type="submit">
                 Create
               </Button>
               <div>
-                <ReactCalendar onChange={onChange} value={value} />
+                <ReactCalendar onChange={onChange} value={value} className="calenderDiv"/>
               </div>
             </div>
+            <div className="appointment mt-2">
+              <h5 className="pl-2">appointment</h5>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="vehicle1"
+                    name="vehicle1"
+                    value="Bike"
+                  />
+                  <label for="vehicle1">Vehicle Test</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="vehicle1"
+                    name="vehicle1"
+                    value="Bike"
+                  />
+                  <label for="vehicle1">see the vehicle</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="vehicle1"
+                    name="vehicle1"
+                    value="Bike"
+                  />
+                  <label for="vehicle1">visit the boutique</label>
+                </li>
+              </ul>
+            </div>
+            <div className="border-bottom"></div>
+            <input type="text" className="input-fild" placeholder="+ Add Calender Editor" />
           </Col>
-          <Col sm={7} className="mt-3">
+          <Col sm={8} className="mt-3">
             <Breadcrumb>
               <Breadcrumb.Item active>Home</Breadcrumb.Item>
 
