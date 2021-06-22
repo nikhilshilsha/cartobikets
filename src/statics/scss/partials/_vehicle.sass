@@ -1,0 +1,117 @@
+.last-product
+    margin-top: 15rem
+    .title-h2
+        font-size: 28px
+        margin: 10px 0 70px
+        font-weight: 400
+        color: #545252
+        text-align: center
+    .card
+        box-shadow: 0 0 4px 2px #f2f2f2
+        transition: all 0.5s ease
+        border: 0
+        .ribbon.ribbon_target
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 5px 10px
+            position: absolute
+            z-index: 1
+            color: #ffffff
+            left: -10px
+            top: 12px
+            .ribbon_inner
+                z-index: -1
+                position: absolute
+                padding: 0
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                &::before
+                    content: ''
+                    position: absolute
+                    border-style: solid
+                    border-color: transparent
+                    bottom: -10px
+                    border-width: 0 10px 10px 0
+                    border-right-color: #222222
+                    left: 0
+                &::after
+                    content: ''
+                    position: absolute
+                    border-style: solid
+                    border-color: transparent
+                    bottom: -10px
+        .ribbon-success
+            background-color: #42b72a
+        .ribbon-warning
+            background-color: #ec9d2f
+        .ribbon-danger
+            background-color: #fa3e3e
+        .card-body
+            .titre
+                color: #000000
+                font-size: 1.2em
+                font-family: 'Source Sans Pro', sans-serif
+                font-weight: 600
+                margin-bottom: 15px
+            .info_auction
+                min-height: 148px
+                .label_infoAuction
+                    min-width: 135px
+                    display: inline-block
+                    font-weight: bold
+                .val_infoAuction
+                    display: inline-block
+                    margin-left: 6px
+            .option
+                margin-bottom: -.75em
+                border-top: 1px solid #dddddd
+                text-align: center
+                .flag_country
+                    border-radius: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 30px
+                    width: 30px
+                    background: #dddddd
+                    border: 1px solid #ffffff
+                    overflow: hidden
+                    .flag_country .iti-flag
+                        transform: scale(1.7)
+                    .iti-flag.be
+                        height: 15px
+                        background-position: -440px 0px
+    .btn-brand
+        color: #ffffff
+        background-color: #5d78ff
+        border-color: #5d78ff
+        width: 200px
+
+.why-cartobike
+    margin-top: 5rem
+    background-color: #ffffff
+    padding: 40px 0
+    .banner-ads_txt
+        padding: 0 20px 30px 30px
+        display: flex
+        justify-content: center
+        align-items: self-start
+        flex-direction: column
+        width: auto
+        p
+            font-size: 16px
+            color: #9b9998
+            line-height: 33px
+
+    .txt-info
+        color: #6d23e3
+        text-transform: uppercase
+        font-weight: 500
+        font-size: 18px
+        margin-bottom: 20px
+    .AddBtn
+        background: #fdc91e
+        border: 0

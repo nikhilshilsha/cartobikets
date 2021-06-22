@@ -1,0 +1,288 @@
+.sidebar
+    position: relative
+    .ico-sidebar
+        box-shadow: 1px 0.196px 11px rgba(130, 131, 131, 0.24)
+        background: #f4f5f7
+
+        .leftbar
+            width: 65px
+            background: #485cd2
+            height: 100%
+            text-align: center
+            position: fixed
+        img
+            width: 30px
+            margin: 2rem 0
+        ul
+            padding-left: 0
+            li
+                list-style: none
+                padding-bottom: 1rem
+                .fas, .far
+                    color: #fff
+                svg
+                    color: #fff
+.auction-list
+    margin-top: 2rem
+    .btn-warning
+        color: #fff
+        border: 0
+    .breadcrumb
+        background: none
+        a
+            color: #5d78ff
+
+    .nav-pills
+        text-transform: uppercase
+        font-size: 13px
+
+        .nav-item
+            box-shadow: 0 1px 3px #a5a3a3
+            margin-right: 1rem
+        .nav-link
+            color: #6c6f82
+        .nav-link.active, .nav-pills .show > .nav-link
+            background: #5d78ff
+            padding: 8px 18px
+            border-radius: 0
+            color: #fff
+    .taf-item
+        padding: .25rem 1rem
+        display: inline-block
+        color: #4db248
+        text-decoration: none
+        margin: 0 5px 5px 0
+        border-radius: 18px
+        background: #d3f3dc
+        border: 1px solid #389040
+        text-transform: capitalize
+.price-data
+    h5
+        font-size: 16px
+        font-weight: bold
+    h4
+        font-size: 14px
+    .real-price
+        color: #5d7aff
+        font-size: 1.75em
+        font-weight: 700
+    .options
+        width: 30%
+        ul
+            padding-left: 0
+            li
+                list-style: none
+                color: #414141
+                padding-bottom: .4rem
+    .label_infoAuction
+        min-width: 135px
+        display: inline-block
+        font-weight: bold
+    .future_date
+        color: red
+        font-weight: 600
+
+    .val_infoAuction
+        display: inline-block
+        margin-left: 6px
+.statistics
+    border-left: 1px solid #ccc
+    ul
+        li
+            list-style: none
+            display: flex
+            font-weight: bold
+            .circle
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #d488ff
+                width: 28px
+                height: 28px
+                border-radius: 50px
+                margin-bottom: 1rem
+                color: #fff
+                margin-right: 1rem
+
+.product-item
+    margin-bottom: 15px
+    padding-bottom: 15px
+    border-bottom: 1px solid #dddddd
+    font-size: .95em
+    display: flex
+    position: relative
+    justify-content: space-between
+    align-content: center
+    .bx-slider
+        width: 300px
+        height: 192px
+        overflow: hidden
+        background: #ffffff
+        img
+            width: 100%
+    .product_desc
+        h3
+            font-size: 18px
+            a
+                color: #585a69
+                font-weight: 600
+    .content-price
+        overflow: hidden
+        display: inline-flex
+        text-align: left
+        flex-wrap: wrap
+    .label_infoAuction
+        min-width: 135px
+        display: inline-block
+        font-weight: bold
+    .val_infoAuction
+        display: inline-block
+        margin-left: 6px
+
+    .text-success
+        color: #28a745 !important
+    .flag_country
+        border-radius: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 30px
+        width: 30px
+        background: #dddddd
+        border: 1px solid #ffffff
+        overflow: hidden
+    .ribbon.ribbon_target
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 5px 10px
+        position: absolute
+        z-index: 1
+        color: #ffffff
+        left: -10px
+        top: 12px
+        .ribbon_inner
+            z-index: -1
+            position: absolute
+            padding: 0
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            &::before
+                content: ''
+                position: absolute
+                border-style: solid
+                border-color: transparent
+                bottom: -10px
+                border-width: 0 10px 10px 0
+                border-right-color: #222222
+                left: 0
+            &::after
+                content: ''
+                position: absolute
+                border-style: solid
+                border-color: transparent
+                bottom: -10px
+    .ribbon-success
+        background-color: #42b72a
+    .ribbon-warning
+        background-color: #ec9d2f
+    .ribbon-danger
+        background-color: #fa3e3e
+
+.task-board
+    // border-left: 1px solid #ccc
+    // height: 100%
+    // position: absolute
+    // background: #fff
+    // right: 0
+
+    .h-list-header
+        padding: 12px
+        background: #485cd2
+        color: #ffffff
+        .h-list
+            justify-content: center
+            flex-direction: column
+            h4
+                font-size: 17px
+                text-align: center
+                margin-bottom: 2rem
+            .search
+                border-radius: 50px
+    .h-list-body
+
+        img
+            width: 40px
+            height: 40px
+            border-radius: 50px
+        .media-user-list
+            padding: 1rem
+            border-bottom: 1px solid #ccc
+            h6
+                font-weight: bold
+                margin-bottom: 0
+                font-size: 14px
+            p
+                font-size: 12px
+                margin-bottom: 0
+            .live-status
+                height: 25px
+                width: 25px
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 50%
+                color: #ffffff
+                background: #A389D4
+    .chatactionBottom
+        position: absolute
+        text-align: center
+        display: flex
+        bottom: 0
+        border-top: 1px solid #ccc
+        .fas
+            color: #FFF200
+            display: flex
+            justify-content: center
+        span
+            font-size: 13px
+            color: #A389D4
+.task-div
+    border-left: 1px solid #ccc
+    height: 100%
+    position: absolute
+    background: #fff
+    right: 0
+.slide-image
+    img
+        width: 100%
+.products
+    padding: 1rem
+    border: 1px solid #ccc
+.event-handel
+    p
+        margin-bottom: 0
+.content
+    ul
+        padding-left: 0
+        li
+            list-style: none
+            color: #414141
+            padding-bottom: .4rem
+.user-car
+    display: flex
+    margin-top: 2rem
+    img
+        height: 35px
+        width: 35px
+        border-radius: 50px
+        box-shadow: 0 5px 7px #dddddd
+        margin-right: 1rem
+    p
+        font-size: .85em
+        color: #a5a3a3
+        text-transform: none
+        display: block
+        font-weight: 400

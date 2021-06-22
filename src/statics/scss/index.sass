@@ -1,0 +1,47 @@
+@import "variable.sass"
+@import "~slick-carousel/slick/slick.css"
+@import "~slick-carousel/slick/slick-theme.css"
+@import "~bootstrap/scss/bootstrap.scss"
+@import "~bootstrap/scss/functions"
+@import "~bootstrap/scss/variables"
+@import "~bootstrap/scss/mixins/breakpoints"
+@import "./mixins/_button"
+@import "./partials/_nav"
+@import "./partials/_vehicle"
+@import "./partials/_sidenav"
+@import "./partials/_home"
+@import "./partials/_dash"
+@import "./partials/_animate"
+
+@font-face
+    font-family: 'Lemonade'
+    src: url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&display=swap')
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: non-webkit-animation
+    margin-top: 2rem
+    background: map-get($fontColor,'orange')
+.first-section
+    padding-top: 1rem
+    img
+        height: 65px
+        max-width: 234px
+    p
+        color: map-get($fontColor,'white')
+        font-size: map-get($size,'one' )
+        padding-top: 1rem
+    ul
+        list-style: none
+        li
+            padding-top: 1rem
+            a
+                color: map-get($fontColor,'white')
+        h5
+            font-weight: 900
+            color: map-get($fontColor,'white')
+// .container__footer
+//     // margin: 0 !important
+body
+    overflow-x: hidden
+    font-family: "Poppins"
