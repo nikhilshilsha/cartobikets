@@ -13,8 +13,25 @@ import {
 import LogoImg from "../../images/logo_w.png";
 import Boutiqu from "../../images/default-vehicle.png";
 import Boutiqu2 from "../../images/default-slider.png";
+import FavouriteFilter from "./favouriteFilter";
+import ListAuctionFilter from "./listauctionFilter";
+import ListAnnounceFilter from "./listannounceFilter";
+import ActivityFilter from "./activityFilter";
+import CleintOrderFilter from "./cleintorderFilter";
+import ReservationFilter from "./reservationFilter";
+import InvoiceReceiveFilter from "./invoicereceiveFilter";
+import InvoiceSentFilter from "./invoicesentFilter";
+import CreditReceiveFilter from "./creditreceiveFilter";
+import CreditSendFilter from "./creditsendFilter";
+import CustomerFilter from "./customerFilter";
+import ProviderFilter from "./providerFilter";
+
+import { useHistory } from "react-router-dom";
 
 function Sidebar({ children }) {
+  const [openSide, setOpenSide] = useState(false);
+  const history = useHistory();
+  console.log(history, "historuryry");
   return (
     <>
       <div className="sidebar">
@@ -108,9 +125,47 @@ function Sidebar({ children }) {
                 </li>
               </ul>
             </div>
+            <div className="ico-filter" onClick={() => setOpenSide(!openSide)}>
+              <div
+                className="round-circle"
+                onClick={() => setOpenSide(!openSide)}
+              >
+                <i class="fas fa-filter"></i>
+              </div>
+            </div>
           </Col>
+          {openSide &&
+            (history.location.pathname == "/list-auction" ? (
+              <ListAuctionFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/list-announce" ? (
+              <ListAnnounceFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/favorite" ? (
+              <FavouriteFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/activity" ? (
+              <ActivityFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/order" ? (
+              <CleintOrderFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/reservation" ? (
+              <ReservationFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/invoicereceive" ? (
+              <InvoiceReceiveFilter
+                setOpenSide={() => setOpenSide(!openSide)}
+              />
+            ) : history.location.pathname == "/invoicesend" ? (
+              <InvoiceSentFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/creditreceive" ? (
+              <CreditReceiveFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/creditsent" ? (
+              <CreditSendFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/customer" ? (
+              <CustomerFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/provider" ? (
+              <ProviderFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : (
+              ""
+            ))}
           <Col lg={11}>{children}</Col>
-          {/* <div className="task-div">
+          <div className="task-div">
             <div className="task-board">
               <div className="h-list-header">
                 <div className="d-flex h-list">
@@ -168,7 +223,7 @@ function Sidebar({ children }) {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
         </Row>
       </div>
     </>

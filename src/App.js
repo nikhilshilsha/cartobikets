@@ -21,6 +21,8 @@ import CreditNoteReceive from "./components/CreditNoteReceive";
 import CreditNoteSent from "./components/CreditNoteSent";
 import Customers from "./components/Customers";
 import Provider from "./components/Provider";
+import Shop from "./components/Shop";
+
 
 function App() {
   return (
@@ -46,6 +48,7 @@ function App() {
         <Route exact path="/creditsent" component={CreditNoteSent} />
         <Route exact path="/customer" component={Customers} />
         <Route exact path="/provider" component={Provider} />
+        <Route exact path="/shop" component={Shop} />
       </Switch>
     </Router>
   );

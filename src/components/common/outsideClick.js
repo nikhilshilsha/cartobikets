@@ -12,6 +12,9 @@ function useOutsideAlerter(ref, props) {
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
         props.setDrop(false);
+        props.setDrop1(false);
+        props.setDrop1(false);
+
       }
     }
 

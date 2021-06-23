@@ -41,13 +41,13 @@ function Auction() {
               <h5 className="pl-2">appointment</h5>
               <ul>
                 <li>
-                  <input
-                    type="checkbox"
-                    id="vehicle1"
-                    name="vehicle1"
-                    value="Bike"
-                  />
-                  <label for="vehicle1">Vehicle Test</label>
+                    <input
+                      type="checkbox"
+                      id="vehicle1"
+                      name="vehicle1"
+                      value="Bike"
+                    />
+                    <label for="vehicle1">Vehicle Test</label>
                 </li>
                 <li>
                   <input

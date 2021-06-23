@@ -14,16 +14,27 @@ import Order from "../../images/order.svg";
 import Message from "../../images/Groupmessage.svg";
 import Notify from "../../images/notify.svg";
 import Flag from "../../images/us.svg";
+import Eng from "../../images/us.svg";
+import French from "../../images/fr.svg";
+import Dutch from "../../images/nl.svg";
+
 import OutsideAlerter from "./outsideClick";
 function TopNav() {
   const [openDrop, setOpenDrop] = useState(false);
   const [openDrop1, setOpenDrop1] = useState(false);
+  const [openDrop2, setOpenDrop2] = useState(false);
 
   const [openSub, setOpenSub] = useState(false);
   const [openSub1, setOpenSub1] = useState(false);
+  const [openSub2, setOpenSub2] = useState(false);
 
   return (
-    <OutsideAlerter drop={openDrop} setDrop={setOpenDrop}>
+    <OutsideAlerter
+      drop={openDrop}
+      setDrop={setOpenDrop}
+      drop1={openDrop1}
+      setDrop1={setOpenDrop1}
+    >
       <header className="header">
         <Navbar collapseOnSelect expand="lg" bg="" variant="dark">
           <Navbar.Brand href="#home">
@@ -117,7 +128,7 @@ function TopNav() {
                             </li>
                             <NavDropdown.Divider />
                             <li>
-                              <a href="">
+                              <a href="/customer">
                                 <svg
                                   class="svg-inline--fa fa-user-tie fa-w-14 icon"
                                   aria-hidden="true"
@@ -138,7 +149,7 @@ function TopNav() {
                               </a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="/provider">
                                 {" "}
                                 <svg
                                   class="svg-inline--fa fa-user-tie fa-w-14 icon"
@@ -182,6 +193,27 @@ function TopNav() {
                                 link.documents_received
                               </a>
                             </li>
+                            <li>
+                              <a href="">
+                                <svg
+                                  class="svg-inline--fa fa-cog fa-w-16 icon"
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  data-prefix="fas"
+                                  data-icon="cog"
+                                  role="img"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 512 512"
+                                  data-fa-i2svg=""
+                                >
+                                  <path
+                                    fill="#f0c53d "
+                                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                                  ></path>
+                                </svg>
+                                Settings
+                              </a>
+                            </li>
                           </>
                         ) : (
                           <>
@@ -205,7 +237,7 @@ function TopNav() {
                               Finance
                             </li>
                             <li>
-                              <a href="">
+                              <a href="/list-announce">
                                 <svg
                                   class="svg-inline--fa fa-copy fa-w-14"
                                   aria-hidden="true"
@@ -226,7 +258,7 @@ function TopNav() {
                               </a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="/favorite">
                                 {" "}
                                 <svg
                                   class="svg-inline--fa fa-star fa-w-18"
@@ -248,7 +280,7 @@ function TopNav() {
                               </a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="/dashboard">
                                 {" "}
                                 <svg
                                   class="svg-inline--fa fa-chart-bar fa-w-16"
@@ -270,7 +302,7 @@ function TopNav() {
                               </a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="/activity">
                                 {" "}
                                 <svg
                                   class="svg-inline--fa fa-dolly fa-w-18"
@@ -292,7 +324,7 @@ function TopNav() {
                               </a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="/trade">
                                 {" "}
                                 <svg
                                   class="svg-inline--fa fa-exchange-alt fa-w-16"
@@ -314,7 +346,7 @@ function TopNav() {
                               </a>
                             </li>
                             <li>
-                              <a href="">
+                              <a href="/calender">
                                 <svg
                                   class="svg-inline--fa fa-exchange-alt fa-w-16"
                                   aria-hidden="true"
@@ -349,7 +381,7 @@ function TopNav() {
                       <img src={Notify} />
                     </a>
                   </li>
-                  <li>
+                  <li className="mr-4">
                     <img
                       src={Flag}
                       className="flag-img"
@@ -358,9 +390,19 @@ function TopNav() {
                     {openDrop1 && (
                       <ul className="sub-menu sub-menu1 ">
                         <>
-                          <li>English</li>
-                          <li>French</li>
-                          <li>Dutch</li>
+                          <li>
+                            <img src={Eng} />
+                            English
+                          </li>
+                          <li>
+                            <img src={French} />
+                            French
+                          </li>
+                          <li>
+                            {" "}
+                            <img src={Dutch} />
+                            Dutch
+                          </li>
                         </>
                       </ul>
                     )}
@@ -370,10 +412,57 @@ function TopNav() {
               <div className="right-content">
                 <ul>
                   <li>
-                    <div className="text-inf">
+                    <div
+                      className="text-inf"
+                      onClick={() => setOpenDrop2(!openDrop2)}
+                    >
                       <img src={Contact} />
                       kors mentenen
                     </div>
+                    {openDrop2 && (
+                      <ul className="sub-menu sub-menu2 w200">
+                        <>
+                          <li>
+                            <div className="text-inf">
+                              <img src={Contact} />
+                              kors mentenen
+                            </div>
+                          </li>
+                          <li>
+                            <i class="fas fa-landmark mr-2"></i>
+                            Automoto
+                            <div className="seting">
+                              {" "}
+                              <i class="fas fa-cogs"></i>
+                            </div>
+                          </li>
+                          <NavDropdown.Divider />
+                          <li>
+                            <svg
+                              class="svg-inline--fa fa-cog fa-w-16 icon"
+                              aria-hidden="true"
+                              focusable="false"
+                              data-prefix="fas"
+                              data-icon="cog"
+                              role="img"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 512 512"
+                              data-fa-i2svg=""
+                            >
+                              <path
+                                fill="#f0c53d "
+                                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                              ></path>
+                            </svg>
+                            Settings
+                          </li>
+                          <li>
+                            <i class="fas fa-power-off text-danger"></i>
+                            logout
+                          </li>
+                        </>
+                      </ul>
+                    )}
                   </li>
                   <li>
                     <div className="ml-lg-2  btnModalAds d-flex align-items-center">
