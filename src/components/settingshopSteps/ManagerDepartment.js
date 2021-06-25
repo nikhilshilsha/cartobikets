@@ -9,7 +9,6 @@ import {
   Form,
   InputGroup,
   FormControl,
-  Table,
 } from "react-bootstrap";
 import Select from "react-select";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -289,115 +288,6 @@ export default () => {
                 <button type="button" class="btn btn-warning">
                   Save
                 </button>
-              </div>
-            </Col>
-          </Row>
-        </TabPanel>
-        <TabPanel></TabPanel>
-        <TabPanel>
-          <h5>module-managers.department :</h5>
-          <Row>
-            <Col sm={6}>
-              <Form.Group
-                as={Row}
-                className="mb-3"
-                controlId="formPlaintextEmail"
-              >
-                <Form.Label column sm="4">
-                  Ajouter un département*
-                </Form.Label>
-                <Col sm="8">
-                  <Select value="module setting" onChange options />
-                  <div className="float-right mt-2">
-                    <button type="button" class="btn btn-warning">
-                      Save
-                    </button>
-                  </div>
-                </Col>
-              </Form.Group>
-            </Col>
-
-            <Col sm={6}>
-              <div className="dash-social table_gray p-1">
-                <Table bordered hover>
-                  <thead>
-                    <tr>
-                      <th>
-                        <span> Nom de département: </span>
-                      </th>
-                      <th>
-                        <span> Action </span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Commercial</td>
-                      <td>
-                        {" "}
-                        <svg
-                          class="svg-inline--fa fa-trash-alt fa-w-14 text-danger"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="trash-alt"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="#e62222"
-                            d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
-                          ></path>
-                        </svg>
-                      </td>
-                    </tr>{" "}
-                    <tr>
-                      <td>Marketing</td>
-                      <td>
-                        {" "}
-                        <svg
-                          class="svg-inline--fa fa-trash-alt fa-w-14 text-danger"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="trash-alt"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="#e62222"
-                            d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
-                          ></path>
-                        </svg>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>center Deappel</td>
-                      <td>
-                        <svg
-                          class="svg-inline--fa fa-trash-alt fa-w-14 text-danger"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="trash-alt"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg=""
-                        >
-                          <path
-                            fill="#e62222"
-                            d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
-                          ></path>
-                        </svg>
-                      </td>
-                    </tr>
-                  </tbody>
-                </Table>
               </div>
             </Col>
           </Row>

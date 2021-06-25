@@ -18,6 +18,12 @@ import Vecle from "../images/default-img.png";
 import ProfileView from "./settingSteps/Profile";
 import MyStore from "./settingshopSteps/MyStore";
 import StoreLinks from "./settingSteps/StoreLinks";
+import ManageRole from "./settingshopSteps/ManageRole";
+import RemoveStore from "./settingshopSteps/RemoveStore";
+import Appointment from "./settingshopSteps/Appointment";
+import AccountValidate from "./User/AccountValidate";
+import SubscribePlan from "./settingshopSteps/SubscribePlan";
+import InvoiceStore from "./settingshopSteps/InvoiceStore";
 
 function Seting() {
   const [activeStep, setActiveStep] = useState("MyProfile");
@@ -25,7 +31,21 @@ function Seting() {
     switch (activeStep) {
       case "MyStore":
         return <MyStore />;
-    
+      case "StoreLinks":
+        return <StoreLinks />;
+      case "ManageRole":
+        return <ManageRole />;
+      case "RemoveStore":
+        return <RemoveStore />;
+      case "Appointment":
+        return <Appointment />;
+      case "AccountValidate":
+        return <AccountValidate />;
+      case "SubscribePlan":
+        return <SubscribePlan />;
+      case "InvoiceStore":
+        return <InvoiceStore />;
+
       default:
         break;
     }
@@ -59,33 +79,33 @@ function Seting() {
                       <i class="far fa-comment-dots"></i>
                       module-setting-store.link.showcase
                     </li>
-                    <li onClick={() => setActiveStep("")}>
+                    <li onClick={() => setActiveStep("StoreLinks")}>
                       <i class="far fa-comment-dots"></i>
                       module-setting-store.link.setting>
                     </li>
-                    <li>
+                    <li onClick={() => setActiveStep("ManageRole")}>
                       <i class="fas fa-user-shield"></i>
                       module-setting-store.link.manager_role
                     </li>
-                    <li>
+                    <li onClick={() => setActiveStep("RemoveStore")}>
                       <i class="fas fa-user-shield"></i>
                       module-setting-store.link.setting_store
                     </li>
-                    <li onClick={() => setActiveStep("")}>
+                    <li onClick={() => setActiveStep("Appointment")}>
                       <i class="fas fa-calendar-plus"></i>Paramétres de
                       rendez-vous
                     </li>
                     <div className="border-bottom mb-2"></div>
-                    <li onClick={() => setActiveStep("")}>
+                    <li onClick={() => setActiveStep("AccountValidate")}>
                       <i class="fas fa-hotel"></i>{" "}
                       module-setting-store.link.pricing
                     </li>
 
-                    <li onClick={() => setActiveStep("")}>
+                    <li onClick={() => setActiveStep("SubscribePlan")}>
                       <i class="fas fa-hotel"></i>{" "}
                       module-setting-store.link.subscription-plan
                     </li>
-                    <li onClick={() => setActiveStep("")}>
+                    <li onClick={() => setActiveStep("InvoiceStore")}>
                       <i class="fas fa-hotel"></i>{" "}
                       module-setting-store.link.invoice_store
                     </li>

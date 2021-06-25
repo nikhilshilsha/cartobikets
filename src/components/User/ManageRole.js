@@ -18,7 +18,7 @@ function Role() {
     <>
       <Navbar />
       <Container>
-        <div className="account">
+        <div className="account ">
           <div className="box-center">
             <div>Add a seller</div>
             <Form>
