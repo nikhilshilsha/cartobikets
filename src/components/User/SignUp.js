@@ -29,7 +29,18 @@ function Login() {
             </Col>
             <Col sm={5}>
               <div className="form-box">
-                <h5>create your account</h5>
+                <div className="check-div">
+                  <i class="far fa-check-circle"></i>
+                  <p>thanks for checking your inbox to complete registartion we have sent registration link at :</p>
+                  <p className="font-weight-bold">ui@gmail.com</p>
+                </div>
+                {/* <div className="verify-div">
+                  <p className="pb-2">
+                    Verify your email address:<strong> ui@gmail.com</strong>
+                  </p>
+                  <p>Before Procedding please check your email for verification. if you did not receive the email, CLICK HERE TO REQUEST ANOTHER</p>
+                </div> */}
+                {/* <h5>create your account</h5>
                 <div className="people d-flex ">
                   <div>
                     <img src={Particular} />
@@ -64,7 +75,7 @@ function Login() {
                       Create an account
                     </Button>
                   </div>
-                </Form>
+                </Form>*/}
               </div>
             </Col>
           </Row>

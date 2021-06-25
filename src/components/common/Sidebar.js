@@ -165,7 +165,7 @@ function Sidebar({ children }) {
               ""
             ))}
           <Col lg={11}>{children}</Col>
-          <div className="task-div">
+          {/* <div className="task-div">
             <div className="task-board">
               <div className="h-list-header">
                 <div className="d-flex h-list">
@@ -223,7 +223,7 @@ function Sidebar({ children }) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </Row>
       </div>
     </>

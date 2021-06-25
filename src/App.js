@@ -22,6 +22,11 @@ import CreditNoteSent from "./components/CreditNoteSent";
 import Customers from "./components/Customers";
 import Provider from "./components/Provider";
 import Shop from "./components/Shop";
+import AccountParticular from "./components/User/AccountParticular";
+import AccountProfessional from "./components/User/AccountProfessional";
+import Setting from "./components/Setting";
+import SettingShop from "./components/SettingShop";
+
 
 
 function App() {
@@ -49,6 +54,14 @@ function App() {
         <Route exact path="/customer" component={Customers} />
         <Route exact path="/provider" component={Provider} />
         <Route exact path="/shop" component={Shop} />
+        <Route exact path="/account-particular" component={AccountParticular} />
+        <Route
+          exact
+          path="/account-professional"
+          component={AccountProfessional}
+        />
+        <Route exact path="/setting" component={Setting} />
+        <Route exact path="/settingshop" component={SettingShop} />
       </Switch>
     </Router>
   );

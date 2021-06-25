@@ -36,6 +36,19 @@
         img
             width: 30px
             margin-right: 1rem
+    .verify-div
+        border: 1px solid #ccc
+        padding: .8rem
+        p
+            margin-bottom: 0
+            font-size: 11px
+    .check-div
+        text-align: center
+        padding: 4rem
+        .far
+            color: #8cdf8c
+            font-size: 57px
+            margin-bottom: 1rem
 .Register
     img
         width: 85%
@@ -132,3 +145,147 @@
                 font-weight: bold
                 color: #777777
                 border-bottom: 2px solid #485cd2
+.account
+    margin-top: 6rem
+    .box_center
+        display: flex
+        justify-content: center
+        width: 80%
+    .position-relative
+        .steps-form li
+            display: inline-block
+            margin: 0 15px 20px 0
+            height: 40px
+            position: relative
+
+        .steps-form li:first-child
+            z-index: 5
+
+        .steps-form li:nth-child(2)
+            z-index: 4
+
+        .steps-form li:nth-child(3)
+            z-index: 3
+
+        .steps-form li:nth-child(4)
+            z-index: 2
+
+        .steps-form li + li
+            margin-left: -10px
+
+        .steps-form li a
+            display: block
+            position: relative
+            background: $gray-light-5
+            padding: 10px 32px
+            color: $white
+            font-size: 14px
+
+            & strong
+                font-weight: 400
+
+            & span
+                padding: 0 0 0 10px
+
+            &:after
+                content: ""
+                position: absolute
+                left: 0px
+                bottom: 0px
+                width: 0
+                height: 0
+                border-left: 20px solid white
+                border-top: 20px solid transparent
+                border-bottom: 20px solid transparent
+
+            &:before
+                content: ""
+                position: absolute
+                right: -20px
+                bottom: 0px
+                width: 0
+                height: 0
+                border-left: 20px solid $gray-light-5
+                border-top: 20px solid transparent
+                border-bottom: 20px solid transparent
+                border-radius: 0
+
+        .steps-form li.active a
+            background: $color-base
+
+            &:before
+                border-left: 20px solid $color-base
+
+        .steps-form li.current a
+            background: $purple-4
+
+            &:before
+                border-left: 20px solid $purple-4
+
+        .steps-form li:first-child a:after
+            display: none
+
+    .user-image
+        border: 3px solid #ffffff
+        box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.1)
+        border-radius: 3px
+        width: 34%
+        img
+            width: 100px
+    .save-btn
+        background: #5d78ff
+    .filter
+        margin-top: 3rem
+        .input-div
+            width: 40%
+            .form-control
+                margin-right: 1rem
+    .table-role
+        margin-top: 2rem
+        table
+            tbody
+                tr
+                    td
+                        .form-control
+                            width: 100px
+.box-center
+    .pricing-tab-wrap
+        margin-top: 1rem
+    .pricing-header
+        color: #838588
+        font-weight: 400
+        margin-bottom: 10px
+        text-transform: uppercase
+    .pricing-table
+        display: flex
+        justify-content: center
+        .w-pricing-header
+            text-align: center
+            padding: 2rem
+            .pricing-price
+
+                color: #394797
+                display: block
+                font-size: 32px
+                font-weight: 700
+        svg
+            width: 14px
+        .list-group-item
+            color: #394797
+            font-weight: bold
+        .btn-div
+            padding: 3rem
+            display: flex
+            justify-content: center
+            .pricing-button
+                background-color: #475cd2
+                color: #ffffff
+                display: inline-block
+                text-decoration: none
+                transition: all 150ms ease-in-out
+                white-space: nowrap
+    .addSeller
+        float: right
+        background: #fdc91e
+        border: none
+        color: #ffffff
