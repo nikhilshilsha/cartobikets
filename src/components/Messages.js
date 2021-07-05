@@ -30,7 +30,7 @@ function Auction() {
             <Col sm={4}>
               <div className="message-div">
                 <div className="task-board">
-                  <div className="h-list-header">
+                  <div className="h-list-header bg-white">
                     <div className="d-flex h-list">
                       <div className="d-flex justify-content-between">
                         {" "}

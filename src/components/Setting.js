@@ -64,7 +64,7 @@ function Seting() {
                   </div>
                 </div>
                 <div className="module">
-                  <ul>
+                  <ul className="screen-module">
                     <li onClick={() => setActiveStep("MyProfile")}>
                       <i class="fas fa-user"></i> module-profile.link.MyProfile
                     </li>
@@ -91,6 +91,22 @@ function Seting() {
                           </Button>
                         </li>
                       </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div className="mobile-module">
+                  <ul className="">
+                    <li onClick={() => setActiveStep("MyProfile")}>
+                      <i class="fas fa-user"></i>
+                    </li>
+                    <li onClick={() => setActiveStep("Settings")}>
+                      <i class="fas fa-wrench"></i>
+                    </li>
+                    <li onClick={() => setActiveStep("StoreLinks")}>
+                      <i class="far fa-comment-dots"></i>
+                    </li>
+                    <li>
+                      <i class="fas fa-store"></i>
                     </li>
                   </ul>
                 </div>

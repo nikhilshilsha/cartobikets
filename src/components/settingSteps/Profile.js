@@ -17,7 +17,11 @@ import "react-intl-tel-input/dist/main.css";
 export default () => {
   return (
     <Form className="account mt-0">
-      <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+      <Form.Group
+        as={Row}
+        className="mb-3 profile-field"
+        controlId="formPlaintextEmail"
+      >
         <Form.Label column sm="4">
           Photo
         </Form.Label>
