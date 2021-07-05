@@ -17,7 +17,10 @@ import Particular from "../../images/accou_par.png";
 import Professional from "../../images/accou_pro.png";
 
 import Navbar from "../common/Navbar";
-function Login() {
+import { useHistory } from "react-router-dom";
+function Signup() {
+  const history = useHistory();
+  console.log(history.location, "location");
   return (
     <>
       <Navbar />
@@ -29,53 +32,72 @@ function Login() {
             </Col>
             <Col sm={5}>
               <div className="form-box">
-                <div className="check-div">
-                  <i class="far fa-check-circle"></i>
-                  <p>thanks for checking your inbox to complete registartion we have sent registration link at :</p>
-                  <p className="font-weight-bold">ui@gmail.com</p>
-                </div>
-                {/* <div className="verify-div">
-                  <p className="pb-2">
-                    Verify your email address:<strong> ui@gmail.com</strong>
-                  </p>
-                  <p>Before Procedding please check your email for verification. if you did not receive the email, CLICK HERE TO REQUEST ANOTHER</p>
-                </div> */}
-                {/* <h5>create your account</h5>
-                <div className="people d-flex ">
-                  <div>
-                    <img src={Particular} />
-                    Particular
+                {history.location.pathname === "/verify-success" ? (
+                  <div className="check-div">
+                    <i class="far fa-check-circle"></i>
+                    <p>
+                      thanks for checking your inbox to complete registartion we
+                      have sent registration link at :
+                    </p>
+                    <p className="font-weight-bold">ui@gmail.com</p>
                   </div>
-                  <div>
-                    <img src={Professional} />
-                    Professional
+                ) : history.location.pathname === "/verification-message" ? (
+                  <div className="verify-div">
+                    <p className="pb-2">
+                      Verify your email address:<strong> ui@gmail.com</strong>
+                    </p>
+                    <p>
+                      Before Procedding please check your email for
+                      verification. if you did not receive the email, CLICK HERE
+                      TO REQUEST ANOTHER
+                    </p>
                   </div>
-                </div>
-                <Form>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Address email" />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control type="password" placeholder="Password" />
-                  </Form.Group>
-                  <Form.Group controlId="validationCustomUsername">
-                    <InputGroup hasValidation>
-                      <InputGroup.Text id="inputGroupPrepend">
-                        +32
-                      </InputGroup.Text>
-                      <Form.Control type="text" placeholder="" required />
-                    </InputGroup>
-                  </Form.Group>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <Button
-                      variant="primary"
-                      type="submit"
-                      className="btn-login"
-                    >
-                      Create an account
-                    </Button>
-                  </div>
-                </Form>*/}
+                ) : (
+                  <>
+                    <h5>create your account</h5>
+                    <div className="people d-flex ">
+                      <div>
+                        <img src={Particular} />
+                        Particular
+                      </div>
+                      <div>
+                        <img src={Professional} />
+                        Professional
+                      </div>
+                    </div>
+                    <Form>
+                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Control
+                          type="email"
+                          placeholder="Address email"
+                        />
+                      </Form.Group>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="formBasicPassword"
+                      >
+                        <Form.Control type="password" placeholder="Password" />
+                      </Form.Group>
+                      <Form.Group controlId="validationCustomUsername">
+                        <InputGroup hasValidation>
+                          <InputGroup.Text id="inputGroupPrepend">
+                            +32
+                          </InputGroup.Text>
+                          <Form.Control type="text" placeholder="" required />
+                        </InputGroup>
+                      </Form.Group>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <Button
+                          variant="primary"
+                          type="submit"
+                          className="btn-login"
+                        >
+                          Create an account
+                        </Button>
+                      </div>
+                    </Form>
+                  </>
+                )}
               </div>
             </Col>
           </Row>
@@ -85,4 +107,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

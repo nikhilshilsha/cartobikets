@@ -18,6 +18,7 @@ import Vecle from "../images/default-img.png";
 import ProfileView from "./settingSteps/Profile";
 import Settings from "./settingSteps/Settings";
 import StoreLinks from "./settingSteps/StoreLinks";
+import CompanyProfile from "./settingSteps/companyProfile";
 
 function Seting() {
   const [activeStep, setActiveStep] = useState("MyProfile");
@@ -29,6 +30,8 @@ function Seting() {
         return <Settings />;
       case "StoreLinks":
         return <StoreLinks />;
+      case "Store":
+        return <CompanyProfile />;
       default:
         break;
     }
@@ -75,7 +78,10 @@ function Seting() {
                     <li>
                       <i class="fas fa-store"></i> My Store
                       <ul>
-                        <li className="text-warning mt-2">
+                        <li
+                          className="text-warning mt-2"
+                          onClick={() => setActiveStep("Store")}
+                        >
                           <img src={Vecle} /> Boutique Mda{" "}
                           <Button
                             type="submit"

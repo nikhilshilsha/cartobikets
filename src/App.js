@@ -27,8 +27,6 @@ import AccountProfessional from "./components/User/AccountProfessional";
 import Setting from "./components/Setting";
 import SettingShop from "./components/SettingShop";
 
-
-
 function App() {
   return (
     <Router>
@@ -42,6 +40,8 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/forgotpassword" component={ForgotPassword} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/verify-success" component={SignUp} />
+        <Route exact path="/verification-message" component={SignUp} />
         <Route exact path="/trade" component={Resumption} />
         <Route exact path="/calender" component={Calender} />
         <Route exact path="/message" component={Messages} />
