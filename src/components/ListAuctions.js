@@ -50,7 +50,73 @@ function Auction() {
                   <img src={InProgress2} alt="fsdf" />
                 </div>
               </Col>
+              <Col sm={3}>
+                <div className="product_desc">
+                  <h3>
+                    <a href="/list-announces-auctions/1" class="">
+                      {" "}
+                      Voiture
+                    </a>
+                  </h3>
+
+                  <div className="content-price">
+                    <div className="info_auction">
+                      <p>
+                        <span class="label_infoAuction">Nombre de produit</span>{" "}
+                        <span class="val_infoAuction text-success">1</span>
+                      </p>
+                      <p class="time_auction">
+                        <span class="label_infoAuction">remaining time</span>
+                        <span className="val_infoAuction future_date">
+                          2142423533
+                        </span>
+                      </p>
+                      <p className="price_auction">
+                        <span class="label_infoAuction">Vente exclusive</span>
+                        <span class="val_infoAuction text-success">1</span>
+                      </p>
+                      <div class="d-flex mt-4">
+                        <div class="flag_country mr-2">
+                          <span class="flag ">
+                            <i class="iti-flag be"></i>
+                          </span>
+                        </div>
+                        <div class="flag_country">
+                          <span class="flag ">
+                            <i class="iti-flag fr"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Col>
               <Col sm={5}>
+                <div className="bottom-sec mt-3">
+                  <p>
+                    <span class="label_infoAuction">Date début</span> :{" "}
+                    <span class="val_infoAuction">18-06-2021 11:18</span>
+                  </p>
+                  <p>
+                    <span class="label_infoAuction">Date fin</span> :{" "}
+                    <span class="val_infoAuction">27-08-2021 12:00</span>
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </div>
+          <div className="product-item">
+            <Row className="width100">
+              <Col sm={4}>
+                <div className="ribbon ribbon_target ribbon-warning">
+                  <span className="ribbon_inner"></span> Enchère en cours{" "}
+                </div>
+                <div className="bx-slider">
+                  <img src={InProgress} alt="fsdf" />
+                </div>
+              </Col>
+              <Col sm={3}>
+                {" "}
                 <div className="product_desc">
                   <h3>
                     <a href="/list-announces-auctions/1" class="">
@@ -91,8 +157,8 @@ function Auction() {
                   </div>
                 </div>
               </Col>
-              <Col sm={3}>
-                <div className="bottom-sec">
+              <Col sm={5}>
+                <div className="bottom-sec mt-3">
                   <p>
                     <span class="label_infoAuction">Date début</span> :{" "}
                     <span class="val_infoAuction">18-06-2021 11:18</span>
@@ -104,64 +170,7 @@ function Auction() {
                 </div>
               </Col>
             </Row>
-          </div>
-          <div className="product-item">
-            <div className="ribbon ribbon_target ribbon-warning">
-              <span className="ribbon_inner"></span> Enchère en cours{" "}
-            </div>
-            <div className="bx-slider">
-              <img src={InProgress} alt="fsdf" />
-            </div>
-            <div className="product_desc">
-              <h3>
-                <a href="/list-announces-auctions/1" class="">
-                  {" "}
-                  Voiture{" "}
-                </a>
-              </h3>
-
-              <div className="content-price">
-                <div className="info_auction">
-                  <p>
-                    <span class="label_infoAuction">Nombre de produit</span>{" "}
-                    <span class="val_infoAuction text-success">1</span>
-                  </p>
-                  <p class="time_auction">
-                    <span class="label_infoAuction">remaining time</span>
-                    <span className="val_infoAuction future_date">
-                      2142423533
-                    </span>
-                  </p>
-                  <p className="price_auction">
-                    <span class="label_infoAuction">Vente exclusive</span>
-                    <span class="val_infoAuction text-success">1</span>
-                  </p>
-                  <div class="d-flex mt-4">
-                    <div class="flag_country mr-2">
-                      <span class="flag ">
-                        <i class="iti-flag be"></i>
-                      </span>
-                    </div>
-                    <div class="flag_country">
-                      <span class="flag ">
-                        <i class="iti-flag fr"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p>
-                <span class="label_infoAuction">Date début</span> :{" "}
-                <span class="val_infoAuction">18-06-2021 11:18</span>
-              </p>
-              <p>
-                <span class="label_infoAuction">Date fin</span> :{" "}
-                <span class="val_infoAuction">27-08-2021 12:00</span>
-              </p>
-            </div>
-          </div>
+          </div>h7
           <div className="product-item">
             <div className="ribbon ribbon_target ribbon-danger">
               <span className="ribbon_inner"></span> Enchère futur{" "}

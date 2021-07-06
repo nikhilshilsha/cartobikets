@@ -257,7 +257,7 @@ function Auction() {
                 </Table>
               </div>
             </Col>
-            <Col sm={5} className="pl-0">
+            <Col sm={7} className="pl-0">
               <div className="table-wrapper table-responsive ">
                 <Table hover>
                   <thead>
@@ -275,81 +275,6 @@ function Auction() {
                       <th>deadline</th>
                       <th>Solde</th>
                       <th>attachment</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div className="text-danger">342j</div>
-                      </td>
-                      <td>15/01/2021</td>
-                      <td>INV-123</td>
-                      <td>@BMW</td>
-                      <td>1 ZAA 4321</td>
-                      <td>265652...</td>
-                      <td>
-                        <span className="btn btn-label rounded-circle btn-label-danger has-tooltip">
-                          M
-                        </span>
-                      </td>
-                      <td>1858.33</td>
-                      <td>20</td>
-                      <td>2230</td>
-                      <td>15/01/2021</td>
-                      <td>tool</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div className="text-danger">342j</div>
-                      </td>
-                      <td>15/01/2021</td>
-                      <td>INV-123</td>
-                      <td>@BMW</td>
-                      <td>1 ZAA 4321</td>
-                      <td>265652...</td>
-                      <td>
-                        <span className="btn btn-label rounded-circle btn-label-danger has-tooltip">
-                          M
-                        </span>
-                      </td>
-                      <td>1858.33</td>
-                      <td>20</td>
-                      <td>2230</td>
-                      <td>15/01/2021</td>
-                      <td>tool</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div className="text-danger">342j</div>
-                      </td>
-                      <td>15/01/2021</td>
-                      <td>INV-123</td>
-                      <td>@BMW</td>
-                      <td>1 ZAA 4321</td>
-                      <td>265652...</td>
-                      <td>
-                        <span className="btn btn-label rounded-circle btn-label-danger has-tooltip">
-                          M
-                        </span>
-                      </td>
-                      <td>1858.33</td>
-                      <td>20</td>
-                      <td>2230</td>
-                      <td>15/01/2021</td>
-                      <td>tool</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
-            </Col>
-            <Col sm={2}>
-              <div className="table-wrapper table-divc">
-                <Table>
-                  <thead>
-                    <tr>
                       <th>Stock</th>
                       <th>Date </th>
                     </tr>
@@ -360,17 +285,81 @@ function Auction() {
                         <div className="text-danger">342j</div>
                       </td>
                       <td>15/01/2021</td>
-                    </tr>{" "}
+                      <td>INV-123</td>
+                      <td>@BMW</td>
+                      <td>1 ZAA 4321</td>
+                      <td>265652...</td>
+                      <td>
+                        <span className="btn btn-label rounded-circle btn-label-danger has-tooltip">
+                          M
+                        </span>
+                      </td>
+                      <td>1858.33</td>
+                      <td>20</td>
+                      <td>2230</td>
+                      <td>15/01/2021</td>
+                      <td>tool</td>
+                      <td></td>
+                      <td>
+                        <div className="text-danger">342j</div>
+                      </td>
+                      <td>15/01/2021</td>
+                    </tr>
                     <tr>
                       <td>
                         <div className="text-danger">342j</div>
                       </td>
                       <td>15/01/2021</td>
-                    </tr>{" "}
+                      <td>INV-123</td>
+                      <td>@BMW</td>
+                      <td>1 ZAA 4321</td>
+                      <td>265652...</td>
+                      <td>
+                        <span className="btn btn-label rounded-circle btn-label-danger has-tooltip">
+                          M
+                        </span>
+                      </td>
+                      <td>1858.33</td>
+                      <td>20</td>
+                      <td>2230</td>
+                      <td>15/01/2021</td>
+                      <td>tool</td>
+                      <td></td>
+                      <td>
+                        <div className="text-danger">342j</div>
+                      </td>
+                      <td>15/01/2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div className="text-danger">342j</div>
+                      </td>
+                      <td>15/01/2021</td>
+                      <td>INV-123</td>
+                      <td>@BMW</td>
+                      <td>1 ZAA 4321</td>
+                      <td>265652...</td>
+                      <td>
+                        <span className="btn btn-label rounded-circle btn-label-danger has-tooltip">
+                          M
+                        </span>
+                      </td>
+                      <td>1858.33</td>
+                      <td>20</td>
+                      <td>2230</td>
+                      <td>15/01/2021</td>
+                      <td>tool</td>
+                      <td></td>
+                      <td>
+                        <div className="text-danger">342j</div>
+                      </td>
+                      <td>15/01/2021</td>
+                    </tr>
                   </tbody>
                 </Table>
               </div>
             </Col>
+          
           </Row>
         </div>
       </Sidebar>

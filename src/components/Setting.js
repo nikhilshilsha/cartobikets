@@ -10,8 +10,9 @@ import {
   InputGroup,
   FormControl,
 } from "react-bootstrap";
-import LogoContact from "../images/default-user.png";
 
+import LogoContact from "../images/default-user.png";
+import Navbar from "./common/Navbar";
 import Sidebar from "./common/Sidebar";
 import Profile from "../images/default-user.png";
 import Vecle from "../images/default-img.png";
@@ -20,7 +21,7 @@ import Settings from "./settingSteps/Settings";
 import StoreLinks from "./settingSteps/StoreLinks";
 import CompanyProfile from "./settingSteps/companyProfile";
 
-function Seting() {
+function Seting(props) {
   const [activeStep, setActiveStep] = useState("MyProfile");
   const setTabContent = () => {
     switch (activeStep) {
@@ -36,8 +37,12 @@ function Seting() {
         break;
     }
   };
+  const [setting, setsetting] = useState(false);
+  const [store, setstore] = useState(false);
+
   return (
     <>
+      <Navbar className="mobile-nav" />
       <Sidebar>
         <div className="auction-list p-2">
           <div className="d-flex justify-content-between align-items-center">
@@ -94,21 +99,50 @@ function Seting() {
                     </li>
                   </ul>
                 </div>
-                <div className="mobile-module">
+                <div className="mobile-module ">
                   <ul className="">
                     <li onClick={() => setActiveStep("MyProfile")}>
                       <i class="fas fa-user"></i>
                     </li>
-                    <li onClick={() => setActiveStep("Settings")}>
+                    <li
+                      onClick={() => {
+                        setActiveStep("Settings");
+                        setstore(false);
+                      }}
+                    >
                       <i class="fas fa-wrench"></i>
                     </li>
-                    <li onClick={() => setActiveStep("StoreLinks")}>
+                    <li
+                      onClick={() => {
+                        setActiveStep("StoreLinks");
+                        setstore(false);
+                      }}
+                    >
                       <i class="far fa-comment-dots"></i>
                     </li>
                     <li>
-                      <i class="fas fa-store"></i>
+                      <i
+                        class="fas fa-store"
+                        onClick={() => setstore(!store)}
+                      ></i>
                     </li>
                   </ul>
+                  {store && (
+                    <ul className="mb-3">
+                      <li
+                        className="text-warning mt-2"
+                        onClick={() => setActiveStep("Store")}
+                      >
+                        <img src={Vecle} /> Boutique Mda{" "}
+                        <Button
+                          type="submit"
+                          className="mb-2 d-flex justify-content-center align-items-center create-btn btn-brand-light "
+                        >
+                          + Create a shop
+                        </Button>
+                      </li>
+                    </ul>
+                  )}
                 </div>
               </div>
             </Col>

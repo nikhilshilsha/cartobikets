@@ -7,8 +7,6 @@ import PopularVehicle from "./PopularVehicle";
 import VehicleSell from "./VehicleSell";
 import Blog from "./Blog";
 
-
-
 function home(props) {
   return (
     <div className="top-section">
