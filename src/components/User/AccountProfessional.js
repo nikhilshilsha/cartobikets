@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Row,
   Col,
@@ -16,12 +16,19 @@ import MyStore from "../User/MyStore";
 import AccountValidate from "../User/AccountValidate";
 import ManageRole from "../User/ManageRole";
 
-
-
-import { stepFormLi } from "../../utils/common";
+import { stepFormLi, stepFormLimobile } from "../../utils/common";
 function Account() {
-  const [step, setStep] = useState(null);
+  const [step, setStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
+  const [width, setWidth] = useState(1200);
+
+  useEffect(() => {
+    function setInnerWidth() {
+      window.addEventListener("resize", () => setWidth(window.innerWidth));
+    }
+    setInnerWidth();
+  }, [window.innerWidth]);
+  console.log(width);
   const stepSetup = (paramstep) => {
     if (paramstep == 1) {
       setStep(1);
@@ -76,14 +83,27 @@ function Account() {
           </div>
           <div class="position-relative">
             <ul class="steps-form">
-              {stepFormLi.map((ste) => (
-                <li
-                  className={step == ste.stepIndex ? "current" : ""}
-                  onClick={() => stepSetup(ste.stepIndex)}
-                >
-                  <a href="javascript:;">{ste.stepName}</a>
-                </li>
-              ))}
+              {width < 320 || width > 600
+                ? stepFormLi.map((ste) => (
+                    <li
+                      className={step == ste.stepIndex ? "current" : ""}
+                      onClick={() => stepSetup(ste.stepIndex)}
+                    >
+                      <a href="javascript:;">{ste.stepName}</a>
+                    </li>
+                  ))
+                : stepFormLimobile.map((ste) => (
+                    <li
+                      className={
+                        step == ste.stepIndex
+                          ? "current mobile-view2"
+                          : "mobile-view2"
+                      }
+                      onClick={() => stepSetup(ste.stepIndex)}
+                    >
+                      <a href="javascript:;">{ste.stepName}</a>
+                    </li>
+                  ))}
             </ul>
             {displayStepFormContent()}
           </div>

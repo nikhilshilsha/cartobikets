@@ -30,7 +30,7 @@ export default (props) => {
               >
                 <span class="d-flex justify-content-center">
                   <i class="icon icon-add-car mr-2"></i>Add an add
-                </span>
+                </span>  
               </button>
             </div>
           </div>
@@ -39,6 +39,9 @@ export default (props) => {
       open={props.sidebar}
       onSetOpen={() => props.setopenSidebar()}
       rootClassName="sideb"
+      // contentClassName={
+      //   props.sidebar ? "sideboverlay open" : "sideboverlay closeb"
+      // }
       styles={{
         sidebar: { background: "white", width: "312px", height: "100vh" },
       }}

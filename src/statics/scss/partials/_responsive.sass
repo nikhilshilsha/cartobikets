@@ -155,10 +155,89 @@
             border-radius: 0
         .fa-times:before
             line-height: 33px
-    .fas.fa-bars
-        display: block
+    .fa-bars
+        display: block!important
     .company-header
         h4
             font-size: 16px
     .user-image
         width: 38%!important
+    .task-div
+        display: none
+    .sideb
+        height: 100vh
+        display: block
+    .account
+        .position-relative
+            .steps-form
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 2%
+                    width: 100%
+                    height: 2px
+                    background: #ddd !important
+                    margin-top: -4px
+                .mobile-view
+                    a
+                        border-radius: 50%
+                        // display: block
+                        display: flex
+                        color: #fff
+                        width: 40px
+                        height: 40px
+                        justify-content: center
+                        align-items: center
+                        padding: 0!important
+                        &::after
+
+                            border-left: 0!important
+                        &::before
+                            position: absolute
+                            top: 47%
+                            min-width: 300px
+                            left: 98%
+                            border: 1px solid #ccc!important
+                        span
+
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            padding: .6rem!important
+                .mobile-view2
+                    margin-right: 2rem
+                    a
+                        border-radius: 50%
+                        // display: block
+                        display: flex
+                        color: #fff
+                        width: 40px
+                        height: 40px
+                        justify-content: center
+                        align-items: center
+                        padding: 0!important
+                        &::after
+
+                            position: absolute
+                            top: 47%
+                            min-width: 80px
+                            left: -100%
+                            border: 1px solid #ccc!important
+                            z-index: -9999
+                        &::before
+
+                            border: none!important
+                        span
+
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            padding: .6rem!important
+
+                .full-view
+                    a
+                        display: none !important
+        .sve-btn
+            width: 30%!important
+    .box_center
+        width: 100%!important

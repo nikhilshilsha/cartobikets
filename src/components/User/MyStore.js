@@ -12,21 +12,39 @@ import {
 } from "react-bootstrap";
 import Navbar from "../common/Navbar";
 import LogoContact from "../../images/default-user.png";
+import IntlTelInput from "react-intl-tel-input";
+import "react-intl-tel-input/dist/main.css";
+import Select from "react-select";
+
 function Account() {
   return (
     <>
       <Navbar />
       <Container>
         <div className="account">
-          <div className="box_center">
+          <div className="box_center fom-div">
             <Form>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field "
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
-                  N TVA
+                  Photo
+                </Form.Label>
+                <Col sm="8">
+                  <div className="user-image">
+                    <img src={LogoContact} />
+                  </div>
+                </Col>
+              </Form.Group>
+              <Form.Group
+                as={Row}
+                className="mb-3 profile-field"
+                controlId="formPlaintextEmail"
+              >
+                <Form.Label column sm="4">
+                  N TVA*
                 </Form.Label>
                 <Col sm="8">
                   <Col sm={12} className="pl-0 pr-0">
@@ -42,11 +60,11 @@ function Account() {
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
-                  store name
+                  store name*
                 </Form.Label>
                 <Col sm="8">
                   <Form.Control type="email" placeholder="store name" />
@@ -54,7 +72,7 @@ function Account() {
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
@@ -68,27 +86,24 @@ function Account() {
 
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
-                  Telephone NUmber
+                  Telephone NUmber*
                 </Form.Label>
                 <Col sm="8">
                   <Col sm={12} className="pl-0 pr-0">
-                    <InputGroup className="mb-2">
-                      <InputGroup.Text>@</InputGroup.Text>
-                      <FormControl
-                        id="inlineFormInputGroup"
-                        placeholder="Username"
-                      />
-                    </InputGroup>
+                    <IntlTelInput
+                      containerClassName="intl-tel-input country-list-code"
+                      inputClassName="form-control "
+                    />
                   </Col>
                 </Col>
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
@@ -96,59 +111,45 @@ function Account() {
                 </Form.Label>
                 <Col sm="8">
                   <Col sm={12} className="pl-0 pr-0">
-                    <InputGroup className="mb-2">
-                      <InputGroup.Text>@</InputGroup.Text>
-                      <FormControl
-                        id="inlineFormInputGroup"
-                        placeholder="Username"
-                      />
+                    <InputGroup className="mb-3 profile-field">
+                      <FormControl aria-label="" />
+                      <FormControl aria-label="" />
                     </InputGroup>
                   </Col>
                 </Col>
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
-                  zip code
+                  zip code*
                 </Form.Label>
                 <Col sm="8">
                   <Col sm={12} className="pl-0 pr-0">
-                    <InputGroup className="mb-2">
-                      <InputGroup.Text>@</InputGroup.Text>
-                      <FormControl
-                        id="inlineFormInputGroup"
-                        placeholder="Username"
-                      />
+                    <InputGroup className="mb-3 profile-field">
+                      <FormControl aria-label="" />
+                      <FormControl aria-label="" />
                     </InputGroup>
                   </Col>
                 </Col>
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
                   Country
                 </Form.Label>
                 <Col sm="8">
-                  <Col sm={12} className="pl-0 pr-0">
-                    <InputGroup className="mb-2">
-                      <InputGroup.Text>@</InputGroup.Text>
-                      <FormControl
-                        id="inlineFormInputGroup"
-                        placeholder="Username"
-                      />
-                    </InputGroup>
-                  </Col>
+                  <Form.Control type="email" placeholder="" />
                 </Col>
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
@@ -156,13 +157,9 @@ function Account() {
                 </Form.Label>
                 <Col sm="8">
                   <Col sm={12} className="pl-0 pr-0">
-                    <InputGroup className="mb-2">
-                      <InputGroup.Text>@</InputGroup.Text>
-                      <FormControl
-                        id="inlineFormInputGroup"
-                        placeholder="Username"
-                      />
-                    </InputGroup>
+                    <Select
+
+                    />
                   </Col>
                 </Col>
               </Form.Group>
