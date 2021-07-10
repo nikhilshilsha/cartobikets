@@ -26,6 +26,10 @@ import AccountParticular from "./components/User/AccountParticular";
 import AccountProfessional from "./components/User/AccountProfessional";
 import Setting from "./components/Setting";
 import SettingShop from "./components/SettingShop";
+import Showcase from "./components/settingshopSteps/Showcase";
+import Product from "./components/showcaseLanding/product";
+import Contact from "./components/showcaseLanding/contact";
+
 
 function App() {
   return (
@@ -62,6 +66,9 @@ function App() {
         />
         <Route exact path="/setting" component={Setting} />
         <Route exact path="/settingshop" component={SettingShop} />
+        <Route exact path="/showcase" component={Showcase} />
+        <Route exact path="/product" component={Product} />
+        <Route exact path="/contact" component={Contact} />
       </Switch>
     </Router>
   );
