@@ -16,6 +16,8 @@ import ShowcaseNav from "../common/showcaseNav";
 import "react-tabs/style/react-tabs.css";
 import Car1 from "../../images/slider/05.jpg";
 import Car2 from "../../images/default-vehicle.png";
+import Default from "../../images/default-slider.png";
+
 import ShowcaseFooter from "../common/showcaseFooter";
 import Banner from "../common/banner";
 
@@ -25,7 +27,7 @@ export default () => {
       <ShowcaseNav />
       <div className="showcase">
         <div style={{ width: "100", height: "100vh" }} className="banner-mobile">
-          <Banner image="http://ss.stagingsdei.com:9062/img/default-slider.612fe670.png" />
+          <Banner image={Default} />
         </div>
         <div className="banner-content">
           <h3>Nouveau</h3>
