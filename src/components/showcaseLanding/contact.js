@@ -22,8 +22,7 @@ import Banner from "../common/banner";
 import ShowcaseFooter from "../common/showcaseFooter";
 import Department from "../ShowcaseSub/Department";
 import Marketing from "../ShowcaseSub/Marketing";
-
-
+import Member from "../ShowcaseSub/Member";
 
 export default (props) => {
   const [activeStep, setActiveStep] = useState("Contact");
@@ -35,6 +34,8 @@ export default (props) => {
         return <Department />;
       case "Marketing":
         return <Marketing />;
+      case "Member":
+        return <Member />;
 
       default:
         break;
@@ -133,13 +134,14 @@ export default (props) => {
             </Row>
           </div>
           <div className="subsidry">
-            <p>page.shop.contact.our_subsidiary</p>
+            <p className="sub-text">page.shop.contact.our_subsidiary</p>
             <div className="tab-data">
               <ul>
                 <li
                   onClick={() => {
                     setActiveStep("Contact");
                   }}
+                  className={activeStep == "Contact" ? "active" : ""}
                 >
                   contact
                 </li>
@@ -147,6 +149,7 @@ export default (props) => {
                   onClick={() => {
                     setActiveStep("Department");
                   }}
+                  className={activeStep == "Department" ? "active" : ""}
                 >
                   Département Commercial
                 </li>
@@ -154,13 +157,15 @@ export default (props) => {
                   onClick={() => {
                     setActiveStep("Marketing");
                   }}
+                  className={activeStep == "Marketing" ? "active" : ""}
                 >
                   Département Marketing
                 </li>
                 <li
                   onClick={() => {
-                    setActiveStep("Settings");
+                    setActiveStep("Member");
                   }}
+                  className={activeStep == "Member" ? "active" : ""}
                 >
                   Département de vente
                 </li>
@@ -169,7 +174,7 @@ export default (props) => {
             {setTabContent()}
           </div>
         </Container>
-        <ShowcaseFooter />  
+        <ShowcaseFooter />
       </div>
     </>
   );

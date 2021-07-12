@@ -29,6 +29,9 @@ import SettingShop from "./components/SettingShop";
 import Showcase from "./components/settingshopSteps/Showcase";
 import Product from "./components/showcaseLanding/product";
 import Contact from "./components/showcaseLanding/contact";
+import About from "./components/showcaseLanding/about";
+import Shopreview from "./components/showcaseLanding/shopreview";
+
 
 
 function App() {
@@ -69,6 +72,8 @@ function App() {
         <Route exact path="/showcase" component={Showcase} />
         <Route exact path="/product" component={Product} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/review" component={Shopreview} />
       </Switch>
     </Router>
   );

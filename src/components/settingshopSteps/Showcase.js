@@ -24,12 +24,17 @@ export default () => {
     <>
       <ShowcaseNav />
       <div className="showcase">
-        <div style={{ width: "100", height: "100vh" }}>
+        <div style={{ width: "100", height: "100vh" }} className="banner-mobile">
           <Banner image="http://ss.stagingsdei.com:9062/img/default-slider.612fe670.png" />
+        </div>
+        <div className="banner-content">
+          <h3>Nouveau</h3>
+          <h2>Audi</h2>
+          <Button variant="primary" className="baner-btn">Je découvre</Button>
         </div>
         <div>
           <Container className="w-search">
-            <div className="d-flex justify-content-between align-items-center mb-2">
+            <div className="d-flex justify-content-between align-items-center mb-2 mob-home">
               <h3 class="mt-0">
                 <span>0</span> page.shop.home.availability_vehicle
               </h3>
@@ -37,7 +42,7 @@ export default () => {
                 <a href="">page.shop.home.see_all_vehicle›</a>
               </h6>
             </div>
-            <Form className="d-flex">
+            <Form className="d-flex formAction">
               <Form.Control type="" placeholder="brand" className="mr-4" />
               <Form.Control type="" placeholder="Model" className="mr-4" />
               <Form.Control

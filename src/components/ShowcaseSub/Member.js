@@ -64,59 +64,6 @@ export default () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col sm={4}>
-          <Card>
-            <Card.Body>
-              <div className="d-flex align-items-center">
-                <img src={Avtar1} />
-                <div>
-                  <p>
-                    <i class="fas fa-envelope"></i> user@promaniak.com
-                  </p>
-                  <p>
-                    <i class="fas fa-phone"></i> +32 0470 16 55 32
-                  </p>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={4}>
-          <Card>
-            <Card.Body>
-              <div className="d-flex align-items-center">
-                <img src={Avtar1} />
-                <div>
-                  <p>
-                    <i class="fas fa-envelope"></i> user@promaniak.com
-                  </p>
-                  <p>
-                    <i class="fas fa-phone"></i> +32 0470 16 55 32
-                  </p>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col sm={4}>
-          <Card>
-            <Card.Body>
-              <div className="d-flex align-items-center">
-                <img src={Avtar1} />
-                <div>
-                  <p>
-                    <i class="fas fa-envelope"></i> user@promaniak.com
-                  </p>
-                  <p>
-                    <i class="fas fa-phone"></i> +32 0470 16 55 32
-                  </p>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
       </Row>
       <Pagination className="d-flex justify-content-center">
         <Pagination.First />

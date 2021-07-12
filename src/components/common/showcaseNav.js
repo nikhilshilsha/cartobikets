@@ -14,12 +14,12 @@ function ShowNav(props) {
     <header className="showcase-nav">
       <Navbar collapseOnSelect expand="lg" bg="" variant="dark">
         <Navbar.Brand href="/">
-          <img src={ShwLogo} className="screen-img" />
+          <img src={ShwLogo} className="" />
         </Navbar.Brand>
         <div className="d-flex justify-content-between">
-          <ul className="right-links">
+          <ul className="right-links mob-view">
             <li>
-              <a href="/">home</a>
+              <a href="/showcase">home</a>
             </li>
             <li>
               <a href="/product">products</a>
@@ -28,10 +28,10 @@ function ShowNav(props) {
               <a href="/contact">contact</a>
             </li>
             <li>
-              <a href="/">apropos</a>
+              <a href="/about">apropos</a>
             </li>
             <li>
-              <a href="/">reaction</a>
+              <a href="/review">reaction</a>
             </li>
             <li>
               <a href="/">
