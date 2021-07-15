@@ -26,7 +26,7 @@ import CreditSendFilter from "./creditsendFilter";
 import CustomerFilter from "./customerFilter";
 import ProviderFilter from "./providerFilter";
 
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function Sidebar({ children }) {
   const [openSide, setOpenSide] = useState(false);
@@ -38,7 +38,9 @@ function Sidebar({ children }) {
         <Row>
           <Col lg={1} className="ico-sidebar">
             <div className="leftbar">
-              <img src={LogoImg} />
+              <Link to="/">
+                <img src={LogoImg} />
+              </Link>
               <ul>
                 <li>
                   <i class="fas fa-chart-bar"></i>
@@ -53,14 +55,14 @@ function Sidebar({ children }) {
                   <i class="fas fa-bullhorn"></i>
                 </li>
                 <li>
-                  <svg viewBox="0 0 90.7 90.7" width="34" height="34">
+                  <svg viewBox="0 0 90.7 90.7" width="22" height="22">
                     <g>
                       <path
-                        fill="#28a745"
+                        fill="#fff"
                         d="M32.1,31.1l-9.8,35c-0.4,1.4-1.9,2.3-3.4,1.9l0,0c-1.4-0.4-2.3-1.9-1.9-3.4l9.8-35L32.1,31.1z"
                       ></path>
                       <rect
-                        fill="#28a745"
+                        fill="#fff"
                         x="22.7"
                         y="8"
                         transform="matrix(0.2686 -0.9633 0.9633 0.2686 2.5547 46.5017)"
@@ -68,7 +70,7 @@ function Sidebar({ children }) {
                         height="27.1"
                       ></rect>
                       <rect
-                        fill="#28a745"
+                        fill="#fff"
                         x="35.8"
                         y="24.3"
                         transform="matrix(0.2686 -0.9633 0.9633 0.2686 9.1593 63.1573)"
@@ -76,7 +78,7 @@ function Sidebar({ children }) {
                         height="2.6"
                       ></rect>
                       <rect
-                        fill="#28a745"
+                        fill="#fff"
                         x="7.3"
                         y="16.3"
                         transform="matrix(0.2686 -0.9633 0.9633 0.2686 -4.0498 29.846)"
@@ -86,14 +88,14 @@ function Sidebar({ children }) {
                     </g>
                     <g>
                       <rect
-                        fill="#28a745"
+                        fill="#fff"
                         x="48.8"
                         y="60.6"
                         width="26.6"
                         height="3.1"
                       ></rect>
                       <rect
-                        fill="#28a745"
+                        fill="#fff"
                         x="46.1"
                         y="63.7"
                         width="32"
@@ -161,69 +163,75 @@ function Sidebar({ children }) {
               <CustomerFilter setOpenSide={() => setOpenSide(!openSide)} />
             ) : history.location.pathname == "/provider" ? (
               <ProviderFilter setOpenSide={() => setOpenSide(!openSide)} />
+            ) : history.location.pathname == "/message" ? (
+              <ProviderFilter setOpenSide={() => setOpenSide(!openSide)} />
             ) : (
               ""
             ))}
           <Col lg={11}>{children}</Col>
-          {/* <div className="task-div">
-            <div className="task-board">
-              <div className="h-list-header">
-                <div className="d-flex h-list">
-                  <h4> messaging.page.messaging.messaging </h4>
-                  <div>
-                    {" "}
-                    <Form.Control
-                      type="text"
-                      placeholder="Search"
-                      className="search"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="h-list-body">
-                <div className="border-bottom">
-                  <div className="d-flex p-3">
-                    <div className="mr-2">
-                      <img src={Boutiqu} />
-                    </div>
-
-                    <img src={Boutiqu2} />
-                  </div>
-                </div>
-                <div className="media-user-list">
-                  <div className="d-flex justify-content-between align-items-center">
+          {history.location.pathname == "/message" ? (
+            ""
+          ) : (
+            <div className="task-div">
+              <div className="task-board">
+                <div className="h-list-header">
+                  <div className="d-flex h-list">
+                    <h4> messaging.page.messaging.messaging </h4>
                     <div>
-                      <div className="d-flex align-items-center">
-                        {" "}
-                        <img src={Boutiqu2} />
-                        <div className="ml-2">
-                          <h6> BMWI i3 | user</h6>
-                          <p>il y a 6 mois</p>
+                      {" "}
+                      <Form.Control
+                        type="text"
+                        placeholder="Search"
+                        className="search"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="h-list-body">
+                  <div className="border-bottom">
+                    <div className="d-flex p-3">
+                      <div className="mr-2">
+                        <img src={Boutiqu} />
+                      </div>
+
+                      <img src={Boutiqu2} />
+                    </div>
+                  </div>
+                  <div className="media-user-list">
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <div className="d-flex align-items-center">
+                          {" "}
+                          <img src={Boutiqu2} />
+                          <div className="ml-2">
+                            <h6> BMWI i3 | user</h6>
+                            <p>il y a 6 mois</p>
+                          </div>
                         </div>
                       </div>
+                      <div className="live-status">1</div>
                     </div>
-                    <div className="live-status">1</div>
                   </div>
                 </div>
-              </div>
-              <div className="chatactionBottom">
-                <div className="d-flex justify-content-between p-2">
-                  <div>
-                    <i class="fas fa-comment"></i>
-                    <span className="">Messageing Page</span>
-                  </div>
-                  <div>
-                    <i class="fas fa-comment"></i>
-                    <span className="">Messageing Page</span>
-                  </div>
-                  <div>
-                    <i class="fas fa-comment"></i>
-                    <span className="">Messageing Page</span>
+                <div className="chatactionBottom">
+                  <div className="d-flex justify-content-between p-2">
+                    <div>
+                      <i class="fas fa-comment"></i>
+                      <span className="">Messageing Page</span>
+                    </div>
+                    <div>
+                      <i class="fas fa-comment"></i>
+                      <span className="">Messageing Page</span>
+                    </div>
+                    <div>
+                      <i class="fas fa-comment"></i>
+                      <span className="">Messageing Page</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div> */}
+          )}
         </Row>
       </div>
     </>

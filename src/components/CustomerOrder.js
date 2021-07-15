@@ -26,7 +26,7 @@ function Order() {
                 <Breadcrumb.Item active>Home</Breadcrumb.Item>
 
                 <Breadcrumb.Item href="#">
-                  breadcrumb.message-page
+                  breadcrumb.customer-order-list-page
                 </Breadcrumb.Item>
               </Breadcrumb>
             </div>

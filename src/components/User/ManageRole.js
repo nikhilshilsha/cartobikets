@@ -19,12 +19,12 @@ function Role() {
       <Navbar />
       <Container>
         <div className="account ">
-          <div className="box-center">
+          <div className="box-center fom-div">
             <div>Add a seller</div>
             <Form>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
@@ -36,7 +36,7 @@ function Role() {
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">
@@ -50,7 +50,7 @@ function Role() {
               </Form.Group>
               <Form.Group
                 as={Row}
-                className="mb-3"
+                className="mb-3 profile-field"
                 controlId="formPlaintextEmail"
               >
                 <Form.Label column sm="4">

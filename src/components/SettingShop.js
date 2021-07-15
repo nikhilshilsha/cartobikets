@@ -24,6 +24,7 @@ import Appointment from "./settingshopSteps/Appointment";
 import AccountValidate from "./User/AccountValidate";
 import SubscribePlan from "./settingshopSteps/SubscribePlan";
 import InvoiceStore from "./settingshopSteps/InvoiceStore";
+import Showcase from "./settingshopSteps/Showcase";
 
 function Seting() {
   const [activeStep, setActiveStep] = useState("MyProfile");
@@ -45,6 +46,8 @@ function Seting() {
         return <SubscribePlan />;
       case "InvoiceStore":
         return <InvoiceStore />;
+      case "Showcase":
+        return <Showcase />;
 
       default:
         break;
@@ -75,9 +78,11 @@ function Seting() {
                     <li onClick={() => setActiveStep("MyStore")}>
                       <i class="fas fa-store"></i>My Store
                     </li>
-                    <li onClick={() => setActiveStep("")}>
-                      <i class="far fa-comment-dots"></i>
-                      module-setting-store.link.showcase
+                    <li>
+                      <a href="/showcase">
+                        <i class="far fa-comment-dots"></i>
+                        module-setting-store.link.showcase
+                      </a>
                     </li>
                     <li onClick={() => setActiveStep("StoreLinks")}>
                       <i class="far fa-comment-dots"></i>
