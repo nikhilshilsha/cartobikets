@@ -7,9 +7,9 @@ import {
   Card,
   Table,
 } from 'react-bootstrap';
-import { Row, Col, Form } from './common/global/elements';
+import { Row, Col, Form } from '../../common/global/elements';
 
-import Sidebar from './common/global/CommonComponents/Sidebar';
+import Sidebar from '../../common/global/CommonComponents/Sidebar';
 import Chart from 'react-google-charts';
 // import Avtar1 from  "../images/avatars/"
 

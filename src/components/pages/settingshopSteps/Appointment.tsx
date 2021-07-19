@@ -10,7 +10,7 @@ import {
   FormControl,
   Table,
 } from "react-bootstrap";
-import { Row, Col } from '../common/global/elements';
+import { Row, Col } from '../../common/global/elements';
 
 import Select from "react-select";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";

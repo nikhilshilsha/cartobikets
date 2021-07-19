@@ -10,17 +10,17 @@ import {
   Table,
   Card,
 } from 'react-bootstrap';
-import ShowcaseNav from '../common/global/CommonComponents/Navs/showcaseNav';
+import ShowcaseNav from '../../common/global/CommonComponents/Navs/showcaseNav';
 import 'react-tabs/style/react-tabs.css';
-import * as Assets from '../common/assets';
+import * as Assets from '../../common/assets';
 
 import Contact from '../ShowcaseSub/Contact';
-import Banner from '../common/global/CommonComponents/banner';
-import ShowcaseFooter from '../common/global/CommonComponents/Footer/showcaseFooter';
+import Banner from '../../common/global/CommonComponents/banner';
+import ShowcaseFooter from '../../common/global/CommonComponents/Footer/showcaseFooter';
 import Department from '../ShowcaseSub/Department';
 import Marketing from '../ShowcaseSub/Marketing';
 import Member from '../ShowcaseSub/Member';
-import { Row, Col } from '../common/global/elements';
+import { Row, Col } from '../../common/global/elements';
 
 export default props => {
   const [activeStep, setActiveStep] = useState('Contact');

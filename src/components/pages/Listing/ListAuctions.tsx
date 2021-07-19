@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col, Button, Container, Nav, Breadcrumb } from 'react-bootstrap';
 
-import Sidebar from './common/global/CommonComponents/Sidebar';
-import * as Assets from './common/assets';
+import Sidebar from '../../common/global/CommonComponents/Sidebar';
+import * as Assets from '../../common/assets';
 
 function Auction() {
   return (

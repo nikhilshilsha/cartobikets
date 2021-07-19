@@ -11,7 +11,7 @@ import {
   FormControl,
   Table,
 } from "react-bootstrap";
-import Navbar from '../common/global/CommonComponents/Navbar';
+import Navbar from '../../common/global/CommonComponents/Navbar';
 import LogoContact from "../../images/default-user.png";
 function Role() {
   return (

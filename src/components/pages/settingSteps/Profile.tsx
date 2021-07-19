@@ -9,8 +9,8 @@ import {
   InputGroup,
   FormControl,
 } from 'react-bootstrap';
-import * as Assets from '../common/assets';
-import { Button } from '../common/global/elements';
+import * as Assets from '../../common/assets';
+import { Button } from '../../common/global/elements';
 import IntlTelInput from 'react-intl-tel-input';
 import 'react-intl-tel-input/dist/main.css';
 

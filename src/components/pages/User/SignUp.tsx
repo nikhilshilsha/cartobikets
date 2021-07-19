@@ -1,13 +1,11 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-import Sign from '../../images/illu-5.png';
-import Particular from '../../images/accou_par.png';
-import Professional from '../../images/accou_pro.png';
+import * as Assets from '../../common/assets';
 
-import Navbar from '../common/global/CommonComponents/Navbar';
+import Navbar from '../../common/global/CommonComponents/Navbar';
 import { useHistory } from 'react-router-dom';
-import { Row, Col, Button, Form } from '../common/global/elements';
+import { Row, Col, Button, Form } from '../../common/global/elements';
 function Signup() {
   const history = useHistory();
   console.log(history.location, 'location');
@@ -34,7 +32,7 @@ function Signup() {
         <Container>
           <Row className="d-flex justify-content-center align-items-center">
             <Col sm={7}>
-              <img src={Sign} />
+              <img src={Assets.Sign} />
             </Col>
             <Col sm={5}>
               <div className="form-box">
@@ -63,11 +61,11 @@ function Signup() {
                     <h5>create your account</h5>
                     <div className="people d-flex ">
                       <div>
-                        <img src={Particular} />
+                        <img src={Assets.Particular} />
                         Particular
                       </div>
                       <div>
-                        <img src={Professional} />
+                        <img src={Assets.Professional} />
                         Professional
                       </div>
                     </div>

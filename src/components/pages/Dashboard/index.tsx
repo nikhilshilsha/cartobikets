@@ -8,9 +8,9 @@ import {
   Card,
 } from "react-bootstrap";
 
-import Sidebar from "./common/global/CommonComponents/Sidebar";
+import Sidebar from "../../common/global/CommonComponents/Sidebar";
 import Chart from "react-google-charts";
-import { Row, Col } from './common/global/elements';
+import { Row, Col } from '../../common/global/elements';
 
 function Auction() {
   return (

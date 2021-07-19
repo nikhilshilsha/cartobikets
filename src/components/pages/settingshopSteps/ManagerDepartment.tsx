@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  
   Container,
   Nav,
   Breadcrumb,
@@ -8,8 +7,8 @@ import {
   InputGroup,
   FormControl,
 } from 'react-bootstrap';
-import { Row, Col,Button } from '../common/global/elements';
-import * as Assets from '../common/assets';
+import { Row, Col, Button } from '../../common/global/elements';
+import * as Assets from '../../common/assets';
 import Select from 'react-select';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';

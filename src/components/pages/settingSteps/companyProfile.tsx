@@ -11,12 +11,12 @@ import {
   InputGroup,
   FormControl,
   Tabs,
-  Tab,
+  Tab,  
 } from 'react-bootstrap';
 // import LogoContact from '../../images/default-user.png';
-import CommonModal from '../common/global/CommonComponents/commonModal';
-import * as Assets from '../common/assets';
-import { Button } from '../common/global/elements';
+import CommonModal from '../../common/global/CommonComponents/commonModal';
+import * as Assets from '../../common/assets';
+import { Button } from '../../common/global/elements';
 import IntlTelInput from 'react-intl-tel-input';
 import 'react-intl-tel-input/dist/main.css';
 export default () => {

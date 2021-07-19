@@ -15,12 +15,12 @@ import Select from 'react-select';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-import ShowcaseFooter from '../common/global/CommonComponents/Footer/showcaseFooter';
-import * as Assets from '../common/assets';
+import ShowcaseFooter from '../../common/global/CommonComponents/Footer/showcaseFooter';
+import * as Assets from '../../common/assets';
 
-import { Row, Col } from '../common/global/elements';
+import { Row, Col } from '../../common/global/elements';
 
-import ShowcaseNav from '../common/global/CommonComponents/Navs/showcaseNav';
+import ShowcaseNav from '../../common/global/CommonComponents/Navs/showcaseNav';
 
 export default () => {
   return (

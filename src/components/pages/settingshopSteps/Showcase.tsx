@@ -9,15 +9,15 @@ import {
   Table,
   Card,
 } from 'react-bootstrap';
-import ShowcaseNav from '../common/global/CommonComponents/Navs/showcaseNav';
+import ShowcaseNav from '../../common/global/CommonComponents/Navs/showcaseNav';
 import 'react-tabs/style/react-tabs.css';
 
 import Default from '../../images/default-slider.png';
-import * as Assets from '../common/assets';
+import * as Assets from '../../common/assets';
 
-import ShowcaseFooter from '../common/global/CommonComponents/Footer/showcaseFooter';
-import Banner from '../common/global/CommonComponents/banner';
-import { Row, Col, Button } from '../common/global/elements';
+import ShowcaseFooter from '../../common/global/CommonComponents/Footer/showcaseFooter';
+import Banner from '../../common/global/CommonComponents/banner';
+import { Row, Col, Button } from '../../common/global/elements';
 
 export default () => {
   return (

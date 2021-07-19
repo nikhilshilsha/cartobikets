@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Row,
   Col,
@@ -9,12 +9,12 @@ import {
   Form,
   InputGroup,
   FormControl,
-} from "react-bootstrap";
-import Navbar from '../common/global/CommonComponents/Navbar';
-import LogoContact from "../../images/default-user.png";
-import IntlTelInput from "react-intl-tel-input";
-import "react-intl-tel-input/dist/main.css";
-import Select from "react-select";
+} from 'react-bootstrap';
+import Navbar from '../../common/global/CommonComponents/Navbar';
+import * as Assets from '../../common/assets';
+import IntlTelInput from 'react-intl-tel-input';
+import 'react-intl-tel-input/dist/main.css';
+import Select from 'react-select';
 
 function Account() {
   return (
@@ -34,7 +34,7 @@ function Account() {
                 </Form.Label>
                 <Col sm="8">
                   <div className="user-image">
-                    <img src={LogoContact} />
+                    <img src={Assets.LogoContact} />
                   </div>
                 </Col>
               </Form.Group>
@@ -157,9 +157,7 @@ function Account() {
                 </Form.Label>
                 <Col sm="8">
                   <Col sm={12} className="pl-0 pr-0">
-                    <Select
-
-                    />
+                    <Select />
                   </Col>
                 </Col>
               </Form.Group>

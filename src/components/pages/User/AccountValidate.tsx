@@ -10,9 +10,10 @@ import {
   ListGroup,
   ListGroupItem,
 } from 'react-bootstrap';
-import Navbar from '../common/global/CommonComponents/Navbar';
-import Arrow from '../../images/arrow.png';
-import { Row, Col, Button } from '../common/global/elements';
+import Navbar from '../../common/global/CommonComponents/Navbar';
+import * as Assets from '../../common/assets';
+
+import { Row, Col, Button } from '../../common/global/elements';
 
 function Account() {
   return (
@@ -46,7 +47,7 @@ function Account() {
                 <div>
                   Annual offer{' '}
                   <p className="yr-save-box text-danger">
-                    <img src={Arrow} />
+                    <img src={Assets.Arrow} />
                     pricing save 20 %
                   </p>
                 </div>

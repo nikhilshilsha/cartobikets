@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Row,
   Col,
@@ -9,10 +9,10 @@ import {
   Card,
   Form,
   Table,
-} from "react-bootstrap";
+} from 'react-bootstrap';
 
-import Pasword from "../../images/illu-8.png";
-import Navbar from '../common/global/CommonComponents/Navbar';
+import * as Assets from '../../common/assets';
+import Navbar from '../../common/global/CommonComponents/Navbar';
 function Login() {
   return (
     <>
@@ -21,7 +21,7 @@ function Login() {
         <Container>
           <Row className="d-flex justify-content-center align-items-center">
             <Col sm={7}>
-              <img src={Pasword} />
+              <img src={Assets.Pasword} />
             </Col>
             <Col sm={5}>
               <div className="form-box">

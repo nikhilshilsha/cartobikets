@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, Container, Nav, Breadcrumb } from 'react-bootstrap';
 
-import Sidebar from './common/global/CommonComponents/Sidebar';
+import Sidebar from '../../common/global/CommonComponents/Sidebar';
 import Slider from 'react-slick';
 
-import * as Assets from './common/assets';
+import * as Assets from '../../common/assets';
 
-import { Row, Col } from './common/global/elements';
+import { Row, Col } from '../../common/global/elements';
 
 function Auction() {
   var settings = {

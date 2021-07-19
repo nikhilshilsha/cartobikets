@@ -14,11 +14,10 @@ import {
 import Select from 'react-select';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import * as Assets from '../common/assets';
 
-import ShowcaseFooter from '../common/global/CommonComponents/Footer/showcaseFooter';
-import Avtar1 from '../../images/avatars/avatar-8.png';
-import { Row, Col } from '../common/global/elements';
+import ShowcaseFooter from '../../common/global/CommonComponents/Footer/showcaseFooter';
+import * as Assets from '../../common/assets';
+import { Row, Col } from '../../common/global/elements';
 
 export default () => {
   return (

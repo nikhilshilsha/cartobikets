@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
   Row,
   Col,
@@ -9,14 +9,14 @@ import {
   Form,
   InputGroup,
   FormControl,
-} from "react-bootstrap";
-import Navbar from '../common/global/CommonComponents/Navbar';
-import MyAccount from "./MyAccount";
-import MyStore from "./MyStore";
-import AccountValidate from "./AccountValidate";
-import ManageRole from "../User/ManageRole";
+} from 'react-bootstrap';
+import Navbar from '../../common/global/CommonComponents/Navbar';
+import MyAccount from './MyAccount';
+import MyStore from './MyStore';
+import AccountValidate from './AccountValidate';
+import ManageRole from '../User/ManageRole';
 
-import { stepFormLi, stepFormLimobile } from "../../utils/common";
+import { stepFormLi, stepFormLimobile } from '../../../utils/common';
 function Account() {
   const [step, setStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
@@ -24,12 +24,12 @@ function Account() {
 
   useEffect(() => {
     function setInnerWidth() {
-      window.addEventListener("resize", () => setWidth(window.innerWidth));
+      window.addEventListener('resize', () => setWidth(window.innerWidth));
     }
     setInnerWidth();
   }, [window.innerWidth]);
   console.log(width);
-  const stepSetup = (paramstep) => {
+  const stepSetup = paramstep => {
     if (paramstep == 1) {
       setStep(1);
     } else if (paramstep < step) {
@@ -84,20 +84,20 @@ function Account() {
           <div className="position-relative">
             <ul className="steps-form">
               {width < 320 || width > 600
-                ? stepFormLi.map((ste) => (
+                ? stepFormLi.map(ste => (
                     <li
-                      className={step == ste.stepIndex ? "current" : ""}
+                      className={step == ste.stepIndex ? 'current' : ''}
                       onClick={() => stepSetup(ste.stepIndex)}
                     >
                       <a href="javascript:;">{ste.stepName}</a>
                     </li>
                   ))
-                : stepFormLimobile.map((ste) => (
+                : stepFormLimobile.map(ste => (
                     <li
                       className={
                         step == ste.stepIndex
-                          ? "current mobile-view2"
-                          : "mobile-view2"
+                          ? 'current mobile-view2'
+                          : 'mobile-view2'
                       }
                       onClick={() => stepSetup(ste.stepIndex)}
                     >

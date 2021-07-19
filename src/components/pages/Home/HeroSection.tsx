@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { Row, Col, Button } from './common/global/elements';
-import * as Assets from './common/assets';
+import { Row, Col, Button } from '../../common/global/elements';
+import * as Assets from '../../common/assets';
 
 function Hero() {
   return (

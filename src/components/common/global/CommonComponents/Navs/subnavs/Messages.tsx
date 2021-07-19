@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row, Col, Button, Container, Breadcrumb } from 'react-bootstrap';
 
-import Sidebar from './common/global/CommonComponents/Sidebar';
+import Sidebar from '../../Sidebar';
 
-import * as Assets from './common/assets';
-import { Form } from './common/global/elements';
+import * as Assets from '../../../../assets';
+import { Form } from '../../../elements';
 function Auction() {
   const SearchFields = [
     {

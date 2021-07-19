@@ -1,13 +1,11 @@
-import React from "react";
-import { Button, Container, Nav, Breadcrumb } from "react-bootstrap";
+import React from 'react';
+import { Button, Container, Nav, Breadcrumb } from 'react-bootstrap';
 
+import Slider from 'react-slick';
+import * as Assets from '../../common/assets';
 
-import Slider from "react-slick";
-import * as Assets from '../common/assets';
-
-
-import ShowcaseNav from "../common/global/CommonComponents/Navs/showcaseNav";
-import { Row, Col } from '../common/global/elements';
+import ShowcaseNav from '../../common/global/CommonComponents/Navs/showcaseNav';
+import { Row, Col } from '../../common/global/elements';
 
 function Auction() {
   var settings = {
@@ -33,7 +31,7 @@ function Auction() {
             </Breadcrumb>
           </div>
           <div>
-            {" "}
+            {' '}
             <Button variant="warning">Ad an Add</Button>
           </div>
         </div>

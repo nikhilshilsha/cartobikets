@@ -13,7 +13,7 @@ import {
 import Select from 'react-select';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { Row, Col, Button } from '../common/global/elements';
+import { Row, Col, Button } from '../../common/global/elements';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },

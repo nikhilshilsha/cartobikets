@@ -14,16 +14,16 @@ import LogoContact from '../images/default-user.png';
 
 import Sidebar from '../../common/global/CommonComponents/Sidebar';
 
-import ProfileView from './settingSteps/Profile';
-import MyStore from './settingshopSteps/MyStore';
-import StoreLinks from './settingSteps/StoreLinks';
-import ManageRole from './settingshopSteps/ManageRole';
-import RemoveStore from './settingshopSteps/RemoveStore';
-import Appointment from './settingshopSteps/Appointment';
-import AccountValidate from './User/AccountValidate';
-import SubscribePlan from './settingshopSteps/SubscribePlan';
-import InvoiceStore from './settingshopSteps/InvoiceStore';
-import Showcase from './settingshopSteps/Showcase';
+import ProfileView from '../settingSteps/Profile';
+import MyStore from '../settingshopSteps/MyStore';
+import StoreLinks from '../settingSteps/StoreLinks';
+import ManageRole from '../settingshopSteps/ManageRole';
+import RemoveStore from '../settingshopSteps/RemoveStore';
+import Appointment from '../settingshopSteps/Appointment';
+import AccountValidate from '../User/AccountValidate';
+import SubscribePlan from '../settingshopSteps/SubscribePlan';
+import InvoiceStore from '../settingshopSteps/InvoiceStore';
+import Showcase from '../settingshopSteps/Showcase';
 
 function Seting() {
   const [activeStep, setActiveStep] = useState('MyProfile');

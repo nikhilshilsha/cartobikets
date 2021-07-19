@@ -12,7 +12,7 @@ import {
   Tab,
 } from 'react-bootstrap';
 // import LogoContact from '../../images/default-user.png';
-import { Row, Col } from '../common/global/elements';
+import { Row, Col } from '../../common/global/elements';
 
 export default () => {
   return (

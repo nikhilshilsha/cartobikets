@@ -8,12 +8,12 @@ import {
   FormControl,
   Table,
 } from 'react-bootstrap';
-import { Row, Col, Button } from '../common/global/elements';
+import { Row, Col, Button } from '../../common/global/elements';
 
 import Select from 'react-select';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import * as Assets from '../common/assets';
+import * as Assets from '../../common/assets';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },

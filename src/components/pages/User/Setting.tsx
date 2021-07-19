@@ -11,14 +11,14 @@ import {
   FormControl,
 } from 'react-bootstrap';
 
-import Navbar from './common/global/CommonComponents/Navbar';
-import Sidebar from './common/global/CommonComponents/Sidebar';
+import Navbar from '../../common/global/CommonComponents/Navbar';
+import Sidebar from '../../common/global/CommonComponents/Sidebar';
 
-import ProfileView from './settingSteps/Profile';
-import Settings from './settingSteps/Settings';
-import StoreLinks from './settingSteps/StoreLinks';
-import CompanyProfile from './settingSteps/companyProfile';
-import * as Assets from './common/assets';
+import ProfileView from '../settingSteps/Profile';
+import Settings from '../settingSteps/Settings';
+import StoreLinks from '../settingSteps/StoreLinks';
+import CompanyProfile from '../settingSteps/companyProfile';
+import * as Assets from '../../common/assets';
 
 function Seting(props) {
   const [activeStep, setActiveStep] = useState('MyProfile');

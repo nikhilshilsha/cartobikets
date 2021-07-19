@@ -10,7 +10,7 @@ import {
   Table,
 } from "react-bootstrap";
 
-import Sidebar from "./common/global/CommonComponents/Sidebar";
+import Sidebar from "../../common/global/CommonComponents/Sidebar";
 
 
 function Order() {

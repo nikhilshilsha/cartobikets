@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Tabs, Tab } from 'react-bootstrap';
-import { Row, Col, Button, Form } from './common/global/elements';
+import { Row, Col, Button, Form } from '../../common/global/elements';
 
 function Ads() {
   const InputFields = [

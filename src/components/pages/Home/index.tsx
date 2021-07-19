@@ -4,7 +4,7 @@ import Navbar from '../../common/global/CommonComponents/Navbar';
 import HeroSection from './HeroSection';
 import AdsSection from './AdsSection';
 import PopularVehicle from './PopularVehicle';
-import VehicleSell from '../../VehicleSell';
+import VehicleSell from './VehicleSell';
 import Blog from './Blog';
 
 function home(props) {

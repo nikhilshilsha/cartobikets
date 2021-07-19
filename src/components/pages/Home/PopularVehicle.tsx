@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Container, Card } from "react-bootstrap";
-import { Row, Col } from './common/global/elements';
-import * as Assets from './common/assets';
+import { Row, Col } from '../../common/global/elements';
+import * as Assets from '../../common/assets';
 
 function Vehicle() {
   return (
