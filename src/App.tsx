@@ -31,6 +31,7 @@ import Product from './components/pages/showcaseLanding/product';
 import Contact from './components/pages/showcaseLanding/contact';
 import About from './components/pages/showcaseLanding/about';
 import Shopreview from './components/pages/showcaseLanding/shopreview';
+import Car from './components/pages/NewAdds/Car/Car';
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/about" component={About} />
         <Route exact path="/review" component={Shopreview} />
+        <Route exact path="/caradd" component={Car} />
       </Switch>
     </Router>
   );

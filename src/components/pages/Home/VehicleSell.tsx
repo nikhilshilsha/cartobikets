@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Card } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import { Row, Col, Button } from '../../common/global/elements';
 import * as Assets from '../../common/assets';
+import CommonModal from '../../common/global/CommonComponents/commonModal';
 
 function Vehicle() {
+  const [open, SetOpen] = useState(false);
+  const history = useHistory();
+  const closeIcon = (
+    <>
+      <img src={Assets.Close} className="closeIco" />
+    </>
+  );
   return (
     <>
       <section className="why-cartobike d-block">
@@ -26,6 +35,7 @@ function Vehicle() {
                   className="btn btn-primary AddBtn"
                   data-toggle="modal"
                   data-target="#modalAds"
+                  onClick={() => SetOpen(!open)}
                 >
                   <span>Add an add</span>
                 </Button>
@@ -60,6 +70,39 @@ function Vehicle() {
             </Col>
           </Row>
         </div>
+        <CommonModal
+          openModal={open}
+          onCloseModal={() => SetOpen(!open)}
+          className={{ modal: 'moterModal', closeButton: 'crossbutton' }}
+          closeIcon={closeIcon}
+        >
+          <h5>Choose your type of vehicle </h5>
+          <div className="vehicle-div">
+            <Row>
+              <Col sm={4}>
+                <div
+                  className="outer-circle"
+                  onClick={() => history.push('/caradd')}
+                >
+                  <i className="fas fa-car"></i>
+                </div>
+                <p className="text-center">Car</p>
+              </Col>
+              <Col sm={4}>
+                <div className="outer-circle">
+                  <i className="fas fa-motorcycle"></i>
+                </div>
+                <p className="text-center">Motorcycle</p>
+              </Col>
+              <Col sm={4}>
+                <div className="outer-circle">
+                  <i className="fas fa-bicycle"></i>
+                </div>
+                <p className="text-center">Bike</p>
+              </Col>
+            </Row>
+          </div>
+        </CommonModal>
       </section>
     </>
   );
