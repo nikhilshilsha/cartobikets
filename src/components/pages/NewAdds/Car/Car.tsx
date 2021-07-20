@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {
   Row,
   Col,
-  Button,
   Container,
   Nav,
   Breadcrumb,
@@ -10,6 +9,8 @@ import {
   InputGroup,
   FormControl,
 } from 'react-bootstrap';
+import { Button } from '../../../common/global/elements';
+import Vehicledetails from './Vehicledetail';
 // import Sidebar from '../../../common/global/CommonComponents/Sidebar';
 
 import { CarSteps, stepFormLimobile } from '../../../../utils/common';
@@ -34,45 +35,41 @@ function Account() {
       setStep(step + 1);
     }
   };
-  // const displayStepFormContent = () => {
-  //   switch (step) {
-  //     case 1:
-  //       return < />;
-  //       break;
-  //     case 2:
-  //       return < />;
-  //     case 3:
-  //       return < />;
-  //     case 4:
-  //       return < />;
-  //     default:
-  //       break;
-  //   }
-  // };
+  const displayStepFormContent = () => {
+    switch (step) {
+      case 1:
+        return <Vehicledetails />;
+      default:
+        break;
+    }
+  };
   return (
-    <>
-      {/* <Sidebar /> */}
-      <Container>
-        <div className="account auction-list">
-          <div className="d-flex justify-content-between align-items-center">
-            <div>
-              <Breadcrumb>
-                <Breadcrumb.Item active>Home</Breadcrumb.Item>
+    // <Sidebar>
+    <Container>
+      <div className="account auction-list car-list">
+        <div className="d-flex justify-content-between align-items-center">
+          <div>
+            <Breadcrumb>
+              <Breadcrumb.Item active>Home</Breadcrumb.Item>
 
-                <Breadcrumb.Item href="#">
-                  breadcrumb.my-announces-list-page
-                </Breadcrumb.Item>
-              </Breadcrumb>
-            </div>
-            <div>
-              {' '}
-              <Button variant="warning">Ad an Add</Button>
-            </div>
+              <Breadcrumb.Item href="#">
+                create-announces-car-page
+              </Breadcrumb.Item>
+            </Breadcrumb>
           </div>
-          <div className="loading d-flex justify-content-between align-items-center">
-            <span className=""></span>
+          <div>
+            {' '}
+            <Button variant="warning" type="submit">
+              Ad an Add
+            </Button>
           </div>
-          <div className="position-relative">
+        </div>
+        <div className="loading d-flex justify-content-between align-items-center">
+          <span className=""></span>
+        </div>
+
+        <div className="position-relative">
+          <div className="d-flex justify-content-between">
             <ul className="steps-form">
               {width < 320 || width > 600
                 ? CarSteps.map(ste => (
@@ -96,11 +93,15 @@ function Account() {
                     </li>
                   ))}
             </ul>
-            {/* {displayStepFormContent()} */}
+            <div className="">
+              <i className="fas fa-car-alt"></i>
+            </div>
           </div>
+          {displayStepFormContent()}
         </div>
-      </Container>
-    </>
+      </div>
+    </Container>
+    // </Sidebar>
   );
 }
 

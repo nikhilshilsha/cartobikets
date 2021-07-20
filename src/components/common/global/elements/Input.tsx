@@ -12,6 +12,7 @@ export default ({ className, type, name, placeholder }: Props) => (
   <>
     <Form.Control
       type={type}
+      
       name={name}
       placeholder={placeholder}
       className={className}
