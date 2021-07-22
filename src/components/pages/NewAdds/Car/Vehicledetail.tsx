@@ -14,17 +14,7 @@ function Account() {
   return (
     <>
       <Container>
-        {/* <div className="vehicleDetail">
-          <div className="d-flex">
-            <h5>choose the vehicle options</h5>
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="mr-2"
-              aria-label="Search"
-            />
-          </div>
-        </div> */}
+       
         <div className="details">
           <h4>vehicle details</h4>
           <label className="vehicle-type">Type de véhicle *</label>

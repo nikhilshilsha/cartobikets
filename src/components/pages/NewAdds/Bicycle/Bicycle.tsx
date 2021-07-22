@@ -10,16 +10,13 @@ import {
   FormControl,
 } from 'react-bootstrap';
 import { Button } from '../../../common/global/elements';
-import Vehicledetails from './Vehicledetail';
-import Vehicleoptions from './Vehicleotions';
+import BicycleDetails from './BicycleDetails';
 import Photos from './Photos';
-import Adddetails from './Adddetails';
-import Submit from './Submit';
-
+import DetailsAdd from './DetailsAdd';
 
 // import Sidebar from '../../../common/global/CommonComponents/Sidebar';
 
-import { CarSteps, stepFormLimobile } from '../../../../utils/common';
+import { BicycleSteps, stepFormLimobile } from '../../../../utils/common';
 function Account() {
   const [step, setStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
@@ -44,15 +41,12 @@ function Account() {
   const displayStepFormContent = () => {
     switch (step) {
       case 1:
-        return <Vehicledetails />;
+        return <BicycleDetails />;
       case 2:
-        return <Vehicleoptions />;
-      case 3:
         return <Photos />;
-      case 4:
-        return <Adddetails />;
-      case 5:
-        return <Submit />;
+      case 3:
+        return <DetailsAdd />;
+
       default:
         break;
     }
@@ -86,7 +80,7 @@ function Account() {
           <div className="d-flex justify-content-between">
             <ul className="steps-form">
               {width < 320 || width > 600
-                ? CarSteps.map(ste => (
+                ? BicycleSteps.map(ste => (
                     <li
                       className={step == ste.stepIndex ? 'current' : ''}
                       onClick={() => stepSetup(ste.stepIndex)}
@@ -107,8 +101,8 @@ function Account() {
                     </li>
                   ))}
             </ul>
-            <div className="">
-              <i className="fas fa-car-alt"></i>
+            <div className="right-ico">
+              <i className="fas fa-bicycle"></i>
             </div>
           </div>
           {displayStepFormContent()}

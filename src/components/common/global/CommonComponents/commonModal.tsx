@@ -26,6 +26,7 @@ export default ({
         closeIcon={closeIcon}
       >
         {children}
+        
       </Modal>
     </div>
   );

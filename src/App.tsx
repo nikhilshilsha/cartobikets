@@ -32,6 +32,11 @@ import Contact from './components/pages/showcaseLanding/contact';
 import About from './components/pages/showcaseLanding/about';
 import Shopreview from './components/pages/showcaseLanding/shopreview';
 import Car from './components/pages/NewAdds/Car/Car';
+import Bike from './components/pages/NewAdds/Bike/Bike';
+import Bicycle from './components/pages/NewAdds/Bicycle/Bicycle';
+import OfferDetail from './components/pages/OfferDetail.tsx';
+
+
 
 function App() {
   return (
@@ -74,6 +79,9 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/review" component={Shopreview} />
         <Route exact path="/caradd" component={Car} />
+        <Route exact path="/motoradd" component={Bike} />
+        <Route exact path="/bicycleadd" component={Bicycle} />
+        <Route exact path="/offerdetail" component={OfferDetail} />
       </Switch>
     </Router>
   );

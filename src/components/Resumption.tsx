@@ -3,9 +3,7 @@ import { Button, Container, Nav, Breadcrumb } from 'react-bootstrap';
 import { Row, Col } from './common/global/elements';
 
 import Sidebar from './common/global/CommonComponents/Sidebar';
-
-import Slider from 'react-slick';
-
+import { Slider } from './common/global/elements';
 import * as Assets from './common/assets';
 
 function Auction() {
@@ -67,7 +65,7 @@ function Auction() {
         <div className="main-product products">
           <Row>
             <Col sm={3} className="slide-image">
-              <Slider {...settings}>
+              <Slider settings={settings}>
                 <div>
                   <img src={Assets.Imge} />
                 </div>

@@ -89,13 +89,19 @@ function Vehicle() {
                 <p className="text-center">Car</p>
               </Col>
               <Col sm={4}>
-                <div className="outer-circle">
+                <div
+                  className="outer-circle"
+                  onClick={() => history.push('/motoradd')}
+                >
                   <i className="fas fa-motorcycle"></i>
                 </div>
                 <p className="text-center">Motorcycle</p>
               </Col>
               <Col sm={4}>
-                <div className="outer-circle">
+                <div
+                  className="outer-circle"
+                  onClick={() => history.push('/bicycleadd')}
+                >
                   <i className="fas fa-bicycle"></i>
                 </div>
                 <p className="text-center">Bike</p>
