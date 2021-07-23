@@ -442,3 +442,85 @@ export const OtherList4 = [
     listtext: 'Toit panoramik',
   },
 ];
+export const OptionList1 = [
+  {
+    listtext: 'ABS',
+  },
+  {
+    listtext: 'Airbags latéraux',
+  },
+  {
+    listtext: 'Avertisseur de franchissement de ligne',
+  },
+  {
+    listtext: 'Détection panneaux signalisation',
+  },
+  {
+    listtext: 'Indicateur de sous-gonflage des pneus',
+  },
+  {
+    listtext: 'ystème détection de collision',
+  },
+  
+];
+
+export const OptionList2 = [
+  {
+    listtext: 'Aide au démarrage en côte',
+  },
+  {
+    listtext: 'Airbags rideaux',
+  },
+  {
+    listtext: 'Capot à soulèvement pour choc piéton',
+  },
+  {
+    listtext: 'ESP',
+  },
+  {
+    listtext: 'Kit anticrevaison',
+  },
+  {
+    listtext: 'Vision nocturne',
+  },
+];
+
+export const OptionList3 = [
+  {
+    listtext: 'Airbag anti-sous-marinage conducteur, passager',
+  },
+  {
+    listtext: 'Antipatinage',
+  },
+  {
+    listtext: 'Capteur dangle mort',
+  },
+  {
+    listtext: 'Essuie glace capteur de pluie',
+  },
+  {
+    listtext: 'Lave-phares',
+  },
+  {
+    listtext: 'Airbag anti-sous-marinage conducteur',
+  },
+];
+
+export const OptionList4 = [
+  {
+    listtext: 'Airbag anti-sous-marinage passager',
+  },
+  {
+    listtext: 'Assistance au freinage durgence',
+  },
+  {
+    listtext: 'Contrôle de freinage en courbe',
+  },
+  {
+    listtext: 'Freins céramique',
+  },
+  {
+    listtext: 'Pneus roulage à plat',
+  },
+  
+];

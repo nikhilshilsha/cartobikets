@@ -1,41 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import { Row, Col } from '../../../../common/global/elements';
+import { Row, Col } from '../../../common/global/elements';
 import {
-  List1,
-  List2,
-  List3,
-  List4,
-} from '../../../../../utils/common';
+  OptionList1,
+  OptionList2,
+  OptionList3,
+  OptionList4,
+} from '../../../../utils/common';
 function Account() {
   return (
     <>
       <Container className="steps-div">
+        <h3 className="equip">Safety equipment</h3>
         <Row>
           <Col sm={3}>
-            {List1.map(listul => (
+            {OptionList1.map(listul => (
               <ul>
                 <li>{listul.listtext}</li>
               </ul>
             ))}
           </Col>
           <Col sm={3}>
-            {List2.map(listul => (
+            {OptionList2.map(listul => (
               <ul>
                 <li>{listul.listtext}</li>
               </ul>
             ))}
           </Col>
           <Col sm={3}>
-            {List3.map(listul => (
+            {OptionList3.map(listul => (
               <ul>
                 <li>{listul.listtext}</li>
               </ul>
             ))}
           </Col>
           <Col sm={3}>
-            {
-            List4.map(listul => (
+            {OptionList4.map(listul => (
               <ul>
                 <li>{listul.listtext}</li>
               </ul>

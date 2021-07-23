@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Row,
   Col,
@@ -11,6 +11,22 @@ import {
 } from 'react-bootstrap';
 import { Slider } from '../../common/global/elements';
 import * as Assets from '../../common/assets';
+import 'react-tabs/style/react-tabs.css';
+import Vehicledetail from './DetailTabs/Vehicledetail';
+import Options from './DetailTabs/Options';
+import Contact from './DetailTabs/Contact';
+import ReactCalendar from 'react-calendar';
+
+import Reviews from './DetailTabs/Reviews';
+import { useHistory } from 'react-router-dom';
+import CommonModal from '../../common/global/CommonComponents/commonModal';
+import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
+import format from 'date-fns/format';
+import parse from 'date-fns/parse';
+import startOfWeek from 'date-fns/startOfWeek';
+import getDay from 'date-fns/getDay';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import 'react-calendar/dist/Calendar.css';
 // import Sidebar from '../../common/global/CommonComponents/Sidebar';
 // import { Row, Col } from '../../common/global/elements';
 
@@ -21,6 +37,42 @@ function Order() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+  const locales = {
+    // eslint-disable-next-line global-require
+    'en-US': require('date-fns/locale/en-US'),
+  };
+  const localizer = dateFnsLocalizer({
+    format,
+    parse,
+    startOfWeek,
+    getDay,
+    locales,
+  });
+  const [value, onChange] = useState(new Date());
+
+  const [open, SetOpen] = useState(false);
+  const history = useHistory();
+  const closeIcon = (
+    <>
+      <img src={Assets.Close} className="closeIco" />
+    </>
+  );
+  const [activeStep, setActiveStep] = useState('Vehicledetail');
+  const setTabContent = () => {
+    switch (activeStep) {
+      case 'Vehicledetail':
+        return <Vehicledetail />;
+      case 'Options':
+        return <Options />;
+      case 'Contact':
+        return <Contact />;
+      case 'Reviews':
+        return <Reviews />;
+
+      default:
+        break;
+    }
   };
   return (
     <>
@@ -122,7 +174,11 @@ function Order() {
                     </div>
                   </div>
                   <div className="calender-div">
-                    <Button type="button" className="btn btn-primary btn-green">
+                    <Button
+                      type="button"
+                      className="btn btn-primary btn-green"
+                      onClick={() => SetOpen(!open)}
+                    >
                       <svg
                         className="svg-inline--fa fa-calendar-alt fa-w-14"
                         aria-hidden="true"
@@ -175,14 +231,170 @@ function Order() {
                       <p>320kw</p>
                     </div>
                   </div>
-                  <div className="bottom"></div>
+                  <div className="car-rating p-2">
+                    <Row>
+                      <Col sm={2}>
+                        <div>
+                          <img src={Assets.Boutiqu} />
+                        </div>
+                      </Col>
+                      <Col sm={10}>
+                        <div className="d-flex justify-content-between">
+                          <div className="car-info">
+                            <p>CAR particular vendor MALINES Belgium</p>
+                            <Button
+                              type="button"
+                              className="btn btn-primary btn-vehicle"
+                            >
+                              +32 0470 12 36 54
+                            </Button>
+                          </div>
+                          <div className="flex">
+                            <div>
+                              <i className="fas fa-star"></i>
+                              <i className="fas fa-star"></i>
+                              <i className="fas fa-star"></i>
+                              <i className="fas fa-star"></i>
+                              <i className="fas fa-star"></i>
+                            </div>
+                            <Button
+                              type="button"
+                              className="btn btn-primary btn-blue mt-3"
+                            >
+                              announce.contact_seller
+                            </Button>
+                          </div>
+                        </div>
+                      </Col>
+                    </Row>
+                  </div>
                 </div>
               </div>
             </Col>
           </Row>
         </div>
+        <div className="vehicle_announcetab ">
+          <ul>
+            <li
+              onClick={() => {
+                setActiveStep('Vehicledetail');
+              }}
+              className={activeStep == 'Vehicledetail' ? 'active' : ''}
+            >
+              announces.announce.vehicle_details
+            </li>
+            <li
+              onClick={() => {
+                setActiveStep('Options');
+              }}
+              className={activeStep == 'Options' ? 'active' : ''}
+            >
+              announces.announce.vehicle_options
+            </li>
+            <li
+              onClick={() => {
+                setActiveStep('Contact');
+              }}
+              className={activeStep == 'Contact' ? 'active' : ''}
+            >
+              announces.announce.contact
+            </li>
+            <li
+              onClick={() => {
+                setActiveStep('Reviews');
+              }}
+              className={activeStep == 'Reviews' ? 'active' : ''}
+            >
+              announces.announce.ratings_reviews
+            </li>
+          </ul>
+        </div>
+        {setTabContent()}
       </Container>
-      {/* </Sidebar> */}
+      <CommonModal
+        openModal={open}
+        onCloseModal={() => SetOpen(!open)}
+        className={{ modal: 'moterModal', closeButton: 'crossbutton' }}
+        closeIcon={closeIcon}
+      >
+        <div className="modal-body calender-info">
+          <Row>
+            <Col sm={4}>
+              <ReactCalendar
+                onChange={onChange}
+                value={value}
+                className="calenderDiv"
+              />
+            </Col>
+            <Col sm={8}>
+              <div className="date-format">
+                <p>vendredi 23 juillet</p>
+
+                <div className="availableListTime">
+                  <svg
+                    className="svg-inline--fa fa-sun fa-w-16"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="sun"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    data-fa-i2svg=""
+                  >
+                    <path
+                      fill="#f6cd469"
+                      d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"
+                    ></path>
+                  </svg>
+                  <span className="btn btn-link mr-3 mb-3 active">
+                    {' '}
+                    08:00 - 08:30{' '}
+                  </span>
+                  <span className="btn btn-link mr-3 mb-3 active">
+                    {' '}
+                    08:30 - 09:00{' '}
+                  </span>
+                  <span className="btn btn-link mr-3 mb-3 active">
+                    {' '}
+                    09:00 - 09:30{' '}
+                  </span>
+                </div>
+                <div className="availableListTime">
+                  <svg
+                    className="svg-inline--fa fa-sun fa-w-16"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="sun"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    data-fa-i2svg=""
+                  >
+                    <path
+                      fill="#f6cd469"
+                      d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"
+                    ></path>
+                  </svg>
+                  <span className="btn btn-link mr-3 mb-3 active">
+                    {' '}
+                    08:00 - 08:30{' '}
+                  </span>
+                  <span className="btn btn-link mr-3 mb-3 active">
+                    {' '}
+                    08:30 - 09:00{' '}
+                  </span>
+                  <span className="btn btn-link mr-3 mb-3 active">
+                    {' '}
+                    09:00 - 09:30{' '}
+                  </span>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </CommonModal>
     </>
   );
 }
