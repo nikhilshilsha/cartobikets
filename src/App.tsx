@@ -35,6 +35,8 @@ import Car from './components/pages/NewAdds/Car/Car';
 import Bike from './components/pages/NewAdds/Bike/Bike';
 import Bicycle from './components/pages/NewAdds/Bicycle/Bicycle';
 import OfferDetail from './components/pages/OfferDetail.tsx';
+import AdvanceSearch from './components/AdvanceSearch';
+
 
 
 
@@ -82,6 +84,7 @@ function App() {
         <Route exact path="/motoradd" component={Bike} />
         <Route exact path="/bicycleadd" component={Bicycle} />
         <Route exact path="/offerdetail" component={OfferDetail} />
+        <Route exact path="/advancesearch" component={AdvanceSearch} />
       </Switch>
     </Router>
   );

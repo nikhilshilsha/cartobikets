@@ -72,6 +72,7 @@ function Ads() {
                   </li>
                   <li>
                     <i className="fas fa-hat-cowboy-side"></i>
+                    
                   </li>
                 </ul>
               </div>

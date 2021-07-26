@@ -391,6 +391,33 @@ function Order() {
                   </span>
                 </div>
               </div>
+              <div>
+                <input
+                  type="radio"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label htmlFor="vehicle1">calendar.trial_request</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label htmlFor="vehicle1">calendar.request_see_vehicle</label>
+              </div>
+
+              <Form.Check
+                type="switch"
+                id="custom-switch"
+                label="calendar.remind_me_jus_before"
+              />
+              <Button type="button" className="btn btn-primary mt-2 btn-blue w100">
+                calender make an appointment
+              </Button>
             </Col>
           </Row>
         </div>
