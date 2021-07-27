@@ -586,7 +586,7 @@ function TopNav(props) {
                                   d="M45.35,75.71L45.35,75.71c-2.52,0-4.56-2.04-4.56-4.56v0c0-2.52,2.04-4.56,4.56-4.56h0c2.52,0,4.56,2.04,4.56,4.56v0C49.91,73.67,47.87,75.71,45.35,75.71z"
                                 ></path>
                               </g>
-                            </svg>                                                                                                                
+                            </svg>
                           </div>
                           <div>
                             <span className="desc">
@@ -596,6 +596,10 @@ function TopNav(props) {
                             <span className="time ">il y a 8 mois</span>
                           </div>
                         </div>
+                      </li>
+                      <NavDropdown.Divider />
+                      <li className="text-center">
+                        <a href="/all-notification">All Notification</a>
                       </li>
                     </ul>
                   )}

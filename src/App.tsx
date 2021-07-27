@@ -36,6 +36,8 @@ import Bike from './components/pages/NewAdds/Bike/Bike';
 import Bicycle from './components/pages/NewAdds/Bicycle/Bicycle';
 import OfferDetail from './components/pages/OfferDetail.tsx';
 import AdvanceSearch from './components/AdvanceSearch';
+import AllNotification from './components/AllNotification';
+
 
 
 
@@ -85,6 +87,7 @@ function App() {
         <Route exact path="/bicycleadd" component={Bicycle} />
         <Route exact path="/offerdetail" component={OfferDetail} />
         <Route exact path="/advancesearch" component={AdvanceSearch} />
+        <Route exact path="/all-notification" component={AllNotification} />
       </Switch>
     </Router>
   );

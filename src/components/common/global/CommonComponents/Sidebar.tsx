@@ -14,12 +14,15 @@ import CreditReceiveFilter from '../../filters/creditreceiveFilter';
 import CreditSendFilter from '../../filters/creditsendFilter';
 import CustomerFilter from '../../filters/customerFilter';
 import ProviderFilter from '../../filters/providerFilter';
+import NotifySideSlide from '../../filters/NotifySideSlide';
+
 import { Row, Col } from '../elements';
 
 import { useHistory, Link } from 'react-router-dom';
 
 function Sidebar({ children }) {
   const [openSide, setOpenSide] = useState(false);
+  const [OpenSideNotify, setOpenSideNotify] = useState(false);
   const history = useHistory();
   console.log(history, 'historuryry');
   return (
@@ -113,7 +116,10 @@ function Sidebar({ children }) {
                   <i className="far fa-calendar-alt"></i>
                 </li>
                 <li>
-                  <i className="fas fa-bell"></i>
+                  <i
+                    className="fas fa-bell"
+                    onClick={() => setOpenSideNotify(!OpenSideNotify)}
+                  ></i>
                 </li>
               </ul>
             </div>
@@ -159,6 +165,12 @@ function Sidebar({ children }) {
               ''
             ))}
           <Col lg={11}>{children}</Col>
+          {OpenSideNotify && (
+            <NotifySideSlide
+              setOpenSide={() => setOpenSideNotify(!OpenSideNotify)}
+              open={OpenSideNotify}
+            />
+          )}
           {history.location.pathname == '/message' ? (
             ''
           ) : (

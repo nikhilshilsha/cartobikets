@@ -3,6 +3,7 @@ import { Container, Form, Breadcrumb, Nav, Table } from 'react-bootstrap';
 import Select from 'react-select';
 import { Row, Col, Button, Lable } from '../components/common/global/elements';
 import Navbar from '../components/common/global/CommonComponents/Navbar';
+import Vehicleoptions from '../components/pages/NewAdds/Car/Vehicleotions';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -436,7 +437,26 @@ First Run Date"
               />
             </Col>
           </Row>
-          <div className="border-bottom mt-3"></div>
+          <div className="border-bottom mt-3 mb-4"></div>
+          <Vehicleoptions />
+          <div className="Form_detail">
+            <h5>Status & Maintenance</h5>
+            <Row>
+              <Col sm={4}>
+                <Lable
+                  className="d-block block-label"
+                  lable="number of owners"
+                />
+
+                <Select
+                  options={options}
+                  handleChange={e => setSelectValue(e)}
+                  selectedOption={selectValue}
+                  isMulti={true}
+                />
+              </Col>
+            </Row>
+          </div>
         </div>
       </Container>
     </>
