@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import {
   Row,
   Col,
@@ -10,10 +10,29 @@ import {
   Form,
   Table,
 } from 'react-bootstrap';
-
+import { useDispatch } from 'react-redux';
 import * as Assets from '../../common/assets';
 import Navbar from '../../common/global/CommonComponents/Navbar';
+import {LoginUser } from "../../../redux/action/userAction";
 function Login() {
+  const [email,setEmail]=useState("")
+  const [password,setPassword]=useState("")
+  const dispatch=useDispatch();
+  const loginref = useRef<HTMLButtonElement>(null)
+  useEffect(() => {
+    async function setBtnEvent(){
+      loginref.current?.addEventListener('click',(e) => e.preventDefault())
+    }
+    setBtnEvent()
+  },[])
+  const onLoginSubmit=async(e)=>{
+  
+   const params={
+  email,password
+}
+ const res=await dispatch(LoginUser(params));
+
+  }
   return (
     <>
       <Navbar />
@@ -28,18 +47,19 @@ function Login() {
                 <h5>Log in</h5>
                 <Form>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="email" value={email} placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)}/>
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control type="password" value={password} placeholder="Password" onChange={(e)=>setPassword(e.target.value)} />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Remember me" />
                   </Form.Group>
                   <div className="d-flex justify-content-between align-items-center">
-                    <Button
+                    <Button onClick={(e)=>onLoginSubmit(e)}
                       variant="primary"
+                      ref={loginref}
                       type="submit"
                       className="btn-login"
                     >

@@ -44,7 +44,8 @@ import AllNotification from './components/AllNotification';
 
 function App() {
   return (
-    <Router>
+
+<Router>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/list-auction" component={ListAuctions} />
@@ -90,6 +91,10 @@ function App() {
         <Route exact path="/all-notification" component={AllNotification} />
       </Switch>
     </Router>
+
+
+
+
   );
 }
 
