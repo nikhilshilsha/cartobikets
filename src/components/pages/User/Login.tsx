@@ -14,10 +14,12 @@ import { useDispatch } from 'react-redux';
 import * as Assets from '../../common/assets';
 import Navbar from '../../common/global/CommonComponents/Navbar';
 import {LoginUser } from "../../../redux/action/userAction";
+import {useHistory} from "react-router-dom";
 function Login() {
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
   const dispatch=useDispatch();
+  const history=useHistory();
   const loginref = useRef<HTMLButtonElement>(null)
   useEffect(() => {
     async function setBtnEvent(){
@@ -31,7 +33,7 @@ function Login() {
   email,password
 }
  const res=await dispatch(LoginUser(params));
-
+console.log(res && res.data)
   }
   return (
     <>
