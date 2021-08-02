@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import {
   Row,
   Col,
@@ -13,7 +13,42 @@ import {
 
 import * as Assets from '../../common/assets';
 import Navbar from '../../common/global/CommonComponents/Navbar';
+import { useDispatch } from 'react-redux';
+import {forgetPassowrd} from "../../../redux/action/userAction";
+import {useHistory} from "react-router-dom";
+import Validate, {ValidationItems, ValidationButton} from 'react-real-time-form-validation';
 function Login() {
+  const [email,setEmail]=useState("")
+  const dispatch=useDispatch()
+  const formValidation = new Validate();
+const history=useHistory();
+  const loginref = useRef<HTMLButtonElement>(null);
+  const loginref1 = useRef<HTMLButtonElement>(null);
+
+
+  useEffect(() => {
+    async function setBtnEvent(){
+      loginref.current?.addEventListener('click',(e) => e.preventDefault())
+      loginref1.current?.addEventListener('click',(e) => e.preventDefault())
+    }
+    setBtnEvent()
+  },[])
+
+  
+  const submitEmail=async(e)=>{
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    formValidation.createValidation('email','notBlank', 'This field is mandatory.');
+    
+    formValidation.createValidation('email', (email)=>re.test(email), 'Please provide a valid email address.');
+    const params={
+      email
+    } 
+const res:any=await dispatch(forgetPassowrd(params))
+if(res.status===200)
+history.push("/verification-message",email)
+
+  }
   return (
     <>
       <Navbar />
@@ -32,14 +67,20 @@ function Login() {
                 <Form>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control name="email" type="email" placeholder="Enter email" value={email} onChange={(e)=>
+                    {formValidation.onChangeStatus(e.target.name, e.target.value);
+                      setEmail(e.target.value)}}/>
+                       <span style={{color: "red"}}>
+                    <ValidationItems name="email" /></span>
                   </Form.Group>
 
                   <div className="d-flex ">
                     <Button
+                    onClick={(e)=>{submitEmail(e)}}
                       variant="btn-info"
                       type="submit"
                       className="btn-reset mr-2"
+                      ref={loginref}
                     >
                       Reset
                     </Button>
@@ -47,6 +88,8 @@ function Login() {
                       variant="btn-light"
                       type="submit"
                       className="cancel"
+                      ref={loginref1}
+                      onClick={()=>{history.push("/login")}}
                     >
                       Cancel
                     </Button>

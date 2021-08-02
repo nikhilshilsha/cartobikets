@@ -18,6 +18,7 @@ export default ({ as, className, fields }: Props) => (
           name={field.name}
           placeholder={field.placeholder}
           className={field.className}
+          onChange={(e)=>field.change(e)}
         />
       </Form.Group>
     ))}

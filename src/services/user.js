@@ -5,3 +5,5 @@ import { client } from './index';
 
 export const registerUser = params => client.post('api/register', params);
 export const LoginUser = params => client.post('api/login', params);
+export const ForgetPassowrd = params =>
+  client.post('/api/req-password-reset', params);

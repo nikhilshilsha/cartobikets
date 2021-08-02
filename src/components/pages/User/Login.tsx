@@ -11,11 +11,14 @@ import {
   Table,
 } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
+import Validate, {ValidationItems, ValidationButton} from 'react-real-time-form-validation';
+
 import * as Assets from '../../common/assets';
 import Navbar from '../../common/global/CommonComponents/Navbar';
 import {LoginUser } from "../../../redux/action/userAction";
 import {useHistory} from "react-router-dom";
 function Login() {
+  const formValidation = new Validate();
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
   const dispatch=useDispatch();
@@ -24,16 +27,40 @@ function Login() {
   useEffect(() => {
     async function setBtnEvent(){
       loginref.current?.addEventListener('click',(e) => e.preventDefault())
+     
     }
     setBtnEvent()
+   
+    
+    
   },[])
   const onLoginSubmit=async(e)=>{
   
-   const params={
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ 
+    formValidation.createValidation('email', 'notBlank', 'This field is mandatory.');
+    formValidation.createValidation('password', 'notBlank', 'This field is mandatory.');
+    formValidation.createValidation('email', (email)=>re.test(email), 'Please provide a valid email address.');
+    formValidation.createValidation('password', (password) => password.length >= 6, 'The password must be at least 6 characters.');
+    
+    const params={
   email,password
 }
- const res=await dispatch(LoginUser(params));
-console.log(res && res.data)
+if(email.length!==0 &&password.length>=6 && re.test(email)){
+ const res: any = await dispatch(LoginUser(params))
+
+if(res.status===200 ){
+  localStorage.setItem("token",res.data.token);
+  history.push("/")
+  
+}
+else{
+  history.push("/login")
+}}
+else{
+  history.push("/login")
+}
+
   }
   return (
     <>
@@ -49,11 +76,20 @@ console.log(res && res.data)
                 <h5>Log in</h5>
                 <Form>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" value={email} placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)}/>
+                    <Form.Control name="email" type="email" value={email} placeholder="Enter email" onChange={(e)=>{
+  
+                      formValidation.onChangeStatus(e.target.name, e.target.value);
+                      setEmail(e.target.value)}}/>
+                       <span style={{color: "red"}}>
+                    <ValidationItems name="email" /></span>
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control type="password" value={password} placeholder="Password" onChange={(e)=>setPassword(e.target.value)} />
+                    <Form.Control name="password" type="password" value={password} placeholder="Password" onChange={(e)=>{
+                      formValidation.onChangeStatus(e.target.name, e.target.value);
+                      setPassword(e.target.value)}} />
+                       <span style={{color: "red"}}>
+                       <ValidationItems name="password" /></span>
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Remember me" />

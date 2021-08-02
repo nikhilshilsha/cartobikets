@@ -1,14 +1,44 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Container } from 'react-bootstrap';
 
 import * as Assets from '../../common/assets';
-
+import { useDispatch } from 'react-redux';
+import {registerUser} from "../../../redux/action/userAction";
 import Navbar from '../../common/global/CommonComponents/Navbar';
 import { useHistory } from 'react-router-dom';
 import { Row, Col, Button, Form } from '../../common/global/elements';
 function Signup() {
+  const [email,setEmail]=useState("");
+const [password,setPassword]=useState("");
+const [phone,setPhone]=useState();
+const [role_id,setRoleid]=useState("");
   const history = useHistory();
-  console.log(history.location, 'location');
+  const dispatch=useDispatch();
+  
+
+  const submitSignup=async()=>{
+    const params={
+      email,password,phone,role_id,
+    }
+    const res: any = await dispatch(registerUser(params))
+    if(res.status===200){
+      localStorage.setItem("token",res.data.token);
+      history.push("/login")
+      
+    }
+    else{
+      history.push("/signup")
+    }
+  }
+  const VerifyEmailFields = [
+    {
+      type: 'email',
+      name: 'email',
+      placeholder: 'Enter Email Id',
+      className: '',
+      controlId: 'formEmail',
+     change:(e)=>{setEmail(e?.target.value)},
+    },]
   const SignupFields = [
     {
       type: 'email',
@@ -16,6 +46,7 @@ function Signup() {
       placeholder: 'Enter Email Id',
       className: '',
       controlId: 'formEmail',
+     change:(e)=>{setEmail(e?.target.value)},
     },
     {
       type: 'password',
@@ -23,6 +54,15 @@ function Signup() {
       placeholder: 'Enter password',
       className: '',
       controlId: 'formPassword',
+      change:(e)=>{setPassword(e?.target.value)}
+    },
+    {
+      type: 'number',
+      name: 'phone',
+      placeholder: 'Enter Phone Number',
+      className: '',
+      controlId: 'formPhone',
+      change:(e)=>{setPhone(e?.target.value)}
     },
   ];
   return (
@@ -48,7 +88,7 @@ function Signup() {
                 ) : history.location.pathname === '/verification-message' ? (
                   <div className="verify-div">
                     <p className="pb-2">
-                      Verify your email address:<strong> ui@gmail.com</strong>
+                      Verify your email address:<strong>{history.location.state}</strong>
                     </p>
                     <p>
                       Before Procedding please check your email for
@@ -60,21 +100,22 @@ function Signup() {
                   <>
                     <h5>create your account</h5>
                     <div className="people d-flex ">
-                      <div>
+                      <div onClick={()=>setRoleid("3")}>
                         <img src={Assets.Particular} />
                         Particular
                       </div>
-                      <div>
+                      <div onClick={()=>setRoleid("4")}>
                         <img src={Assets.Professional} />
                         Professional
                       </div>
                     </div>
-                    <Form fields={SignupFields} />
+                    <Form fields={SignupFields}  />
                     <div className="d-flex justify-content-between align-items-center">
                       <Button
                         variant="primary"
                         type="submit"
                         className="btn-login"
+                        onClick={()=>submitSignup()}
                       >
                         Create an account
                       </Button>

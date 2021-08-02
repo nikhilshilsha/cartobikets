@@ -94,7 +94,7 @@ function Account() {
                     Email Address*
                   </Form.Label>
                   <Col sm="8">
-                    <Form.Control type="email" placeholder="email address" />
+                    <Form.Control type="email" placeholder="email address"  />
                   </Col>
                 </Form.Group>
                 <Form.Group

@@ -10,10 +10,22 @@ export const registerUser = params => async dispatch => {
   return resp;
 };
 export const LoginUser = params => async dispatch => {
-  const resp = await userApis.LoginUser(params);
-  dispatch({
-    type: userActionTypes.LoginUser,
-    payload: resp,
-  });
-  return resp;
+  try {
+    const resp = await userApis.LoginUser(params);
+    dispatch({
+      type: userActionTypes.LoginUser,
+      payload: resp,
+    });
+    return resp;
+  } catch {}
+};
+export const forgetPassowrd = params => async dispatch => {
+  try {
+    const resp = await userApis.ForgetPassowrd(params);
+    dispatch({
+      type: userActionTypes.ForgetPassowrd,
+      payload: resp,
+    });
+    return resp;
+  } catch {}
 };
